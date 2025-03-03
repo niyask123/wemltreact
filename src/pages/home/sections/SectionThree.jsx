@@ -1,13 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { sectionThreePackages } from "../../../data/dats";
 
 const SectionThree = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating an API call with a delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust timing as needed
+  }, []);
+
   return (
     <div>
-      <div className="p-3 pt-0 lg:grid-cols-2 grid gap-4 bg-white container mx-auto">
-        {sectionThreePackages.map((pkg) => (
-          <CarouselItem key={pkg.id} packageData={pkg} />
-        ))}
+      <div className="p-3 pt-0 lg:grid-cols-2 pb-20 grid gap-4 bg-white container mx-auto">
+        {isLoading
+          ? Array.from({ length: 3 }).map((_, index) => <SkeletonItem key={index} />)
+          : sectionThreePackages.map((pkg) => <CarouselItem key={pkg.id} packageData={pkg} />)}
+      </div>
+    </div>
+  );
+};
+
+// Skeleton Loader Component
+const SkeletonItem = () => {
+  return (
+    <div className="flex flex-col md:flex-row gap-2 w-full h-fit md:h-[300px] rounded-2xl box-shadow-g">
+      <div className="relative w-full md:w-[50%] max-w-4xl overflow-hidden">
+        <div className="skeleton h-full w-full rounded-2xl"></div>
+      </div>
+
+      <div className="flex flex-col flex-wrap gap-3 lg:gap-6 p-3 pb-5 justify-center w-full md:w-[50%]">
+        <div className="skeleton h-6 w-3/4 rounded"></div>
+        <div className="skeleton h-4 w-full rounded"></div>
+        <div className="skeleton h-4 w-2/3 rounded"></div>
+        <div className="skeleton h-6 w-1/3 rounded"></div>
+        <div className="skeleton h-10 w-full rounded"></div>
       </div>
     </div>
   );

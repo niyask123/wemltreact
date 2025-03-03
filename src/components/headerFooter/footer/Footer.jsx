@@ -1,10 +1,13 @@
 import React from 'react'
-import SmFooter from '../footer/SmFooter'
+import SmFooter from './screenFooter/SmFooter'
+import MainFooter from './screenFooter/MainFooter';
+
 
 const Footer = () => {
   return (
     <div>
       <SmFooter/>
+      <MainFooter/>
     </div>
   )
 }

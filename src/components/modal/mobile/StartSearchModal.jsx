@@ -8,9 +8,11 @@ const StartSearchModal = ({ isOpen, onClose }) => {
     const [showOptions, setShowOptions] = useState(true);
     const [isInputClicked, setIsInputClicked] = useState(false);
     const modalRef = useRef(null);
+
     const handleInputClick = () => {
         setIsInputClicked(true);
     };
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -29,7 +31,7 @@ const StartSearchModal = ({ isOpen, onClose }) => {
 
     return (
         <div>
-            <dialog id="my_modal_2" className="modal fixed  inset-0 bg-black/20 items-center justify-center flex" open={isOpen}>
+            <dialog id="my_modal_2" className="modal fixed inset-0 bg-black/20 items-center justify-center flex" open={isOpen}>
                 <div ref={modalRef} className="bg-[#f7f7f7] h-full p-5 rounded-lg shadow-lg flex flex-col gap-2 w-full max-w-lg">
                     <div className="flex justify-between">
                         <form method="dialog">
@@ -68,12 +70,11 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                                 <p className="text-xs">Suggested destinations</p>
                                 <div className="">
                                     <div
-                                        className={`${isInputClicked ? "max-h-[calc(113vh-200px)]" : "max-h-[calc(90vh-345px)]"
-                                            } overflow-y-auto flex flex-col gap-3 scrollbar-hidden transition-all duration-300`}
+                                        className={`${isInputClicked ? "max-h-[calc(113vh-200px)]" : "max-h-[calc(90vh-345px)]"} overflow-y-auto flex flex-col gap-3 scrollbar-hidden transition-all duration-300`}
                                     >
-                                        {stayList.map((location) => (
+                                        {stayList.map((location, index) => (
                                             <div
-                                                key={location.id}
+                                                key={`${location.id}-${index}`} // Ensuring unique keys
                                                 className="flex px-3 py-2 rounded-lg items-center flex-row justify-start gap-3 cursor-pointer hover:bg-gray-100"
                                             >
                                                 <img
@@ -91,7 +92,6 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                                         ))}
                                     </div>
                                 </div>
-
                             </div>
                         ) : (
                             <div className="flex flex-col gap-3">
@@ -106,9 +106,9 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                                 />
                                 <p className="text-xs">Suggested Experiences</p>
                                 <div className="h-auto overflow-y-hidden">
-                                    {experiencesList.map((location) => (
+                                    {experiencesList.map((location, index) => (
                                         <div
-                                            key={location.id}
+                                            key={`${location.id}-${index}`} // Ensuring unique keys
                                             className="flex px-3 py-2 rounded-lg items-center flex-row justify-start gap-3 cursor-pointer hover:bg-gray-100"
                                         >
                                             <img
@@ -129,9 +129,7 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                         )}
                     </div>
 
-                    <div
-                        className={`flex flex-col gap-3 mt-4 transition-all duration-300 ${showOptions ? "opacity-100 h-auto" : "opacity-0 h-0 "}`}
-                    >
+                    <div className={`flex flex-col gap-3 mt-4 transition-all duration-300 ${showOptions ? "opacity-100 h-auto" : "opacity-0 h-0"}`}>
                         <div className="flex justify-between p-3 bg-white shadow-sm rounded-lg">
                             <span className="text-gray-600">When</span>
                             <span className="font-semibold">Add Dates</span>

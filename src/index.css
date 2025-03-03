@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.lt-01{
+    @apply border h-[3rem] md:h-[2.5rem] justify-center items-center font-semibold rounded-full border-[#dddddd] flex flex-row gap-1 px-3.5 hover:cursor-pointer
+}
+
