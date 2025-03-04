@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       
       <SmHeader/>
-      <div className="md:h-[14rem]">
+      <div className="md:h-[15rem] h-[8rem]">
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <MainHeader/>
       </div>

@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineMenu, AiOutlineUserAdd } from "react-icons/ai";
 import LoginSignupModal from "../../../modal/logins/LoginSignupModal";
 import PackagesMenu from "../../../../pages/home/elements/PackagesMenu";
 import { div } from "framer-motion/client";
+import CustomNav from "../../../modal/customNav/CustomNav";
 
 const MainHeader = () => {
+    const modalRef = useRef(null);
+
+    const openModal = () => {
+        if (modalRef.current) modalRef.current.showModal();
+    };
+    
+
     const [showOptions, setShowOptions] = useState(true);
     const [activeTab, setActiveTab] = useState("tab1");
     const [loading, setLoading] = useState(true);
@@ -23,7 +31,6 @@ const MainHeader = () => {
         setTimeout(() => setLoading(false), 2000);
     }, [])
     return (
-
         <div className="hidden md:flex flex-col gap-3 p-4 pt-6 pb-2 px-3 container mx-auto">
             <div className="flex flex-row justify-between items-center">
                 <div>
@@ -38,12 +45,9 @@ const MainHeader = () => {
                             />
                         )
                     }
-
                 </div>
-
-
                 {/* Tabs: "Stay" and "Experiences" */}
-                <div className={`flex gap-3 transition-all duration-300 pl-[10%] ${showOptions ? "block" : "hidden"}`}>
+                <div className={`flex gap-3 transition-all duration-300 pl-[10%] zoom-in ${showOptions ? "block" : "hidden"}`}>
 
                     {
                         loading ? (
@@ -54,14 +58,14 @@ const MainHeader = () => {
                         ) : (
                             <>
                                 <div
-                                    className={`cursor-pointer  rounded-md ${activeTab === "tab1" ? " font-semibold" : ""
+                                    className={`cursor-pointer  rounded-full hover:bg-gray-100 p-2 px-4  ${activeTab === "tab1" ? " font-semibold" : ""
                                         }`}
                                     onClick={() => setActiveTab("tab1")}
                                 >
                                     Stays
                                 </div>
                                 <div
-                                    className={`cursor-pointer  rounded-md ${activeTab === "tab2" ? " font-semibold" : ""
+                                    className={`cursor-pointer  rounded-full hover:bg-gray-100 p-2 px-4  ${activeTab === "tab2" ? " font-semibold" : ""
                                         }`}
                                     onClick={() => setActiveTab("tab2")}
                                 >
@@ -70,38 +74,28 @@ const MainHeader = () => {
                             </>
                         )
                     }
-
-
-
                 </div>
 
                 {/* New Content when scrolling DOWN */}
-                <div className={`zoom-in  flex gap-3 transition-all duration-300 ${showOptions ? "hidden" : "block"}`}>
+                <div  className={`zoom-in  flex gap-3 transition-all duration-300 ${showOptions ? "hidden" : "block"}`}>
                     <div>
-
-
-                        <div className="text-xs font-medium max-w-[850px]  lg:max-w-[650px] rounded-full shadow-md border border-[#DDDDDD] flex flex-row w-full justify-between items-center container mx-auto">
+                        <div onClick={()=>document.getElementById('customNav').showModal()} className="text-xs font-medium max-w-[850px]  lg:max-w-[650px] rounded-full shadow-md border border-[#DDDDDD] flex flex-row w-full justify-between items-center container mx-auto">
                             <div className="flex-1">
                                 <button className="dropdown-btn text-nowrap px-3 pl-6 py-3 flex flex-col rounded-full hover:bg-gray-200 transition-all duration-200">
                                     Anywhere
-
                                 </button>
                             </div>
                             <div className="h-6 border"></div>
                             <div className="hidden sm:flex flex-1 ">
                                 <button className="dropdown-btn text-nowrap px-3 py-3 flex flex-col rounded-full  hover:bg-gray-200 transition-all duration-200">
                                     Any week
-
                                 </button>
                             </div>
                             <div className="h-6 border"></div>
-
-
                             <div className="flex items-center space-x-2 group hover:bg-gray-200 rounded-full transition-all duration-200">
                                 <div className="flex-1">
                                     <button className="dropdown-btn text-nowrap px-3 py-3 flex flex-col rounded-full">
                                         Add guests
-
                                     </button>
                                 </div>
                                 <div className="relative flex flex-col">
@@ -115,9 +109,6 @@ const MainHeader = () => {
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
 
@@ -129,27 +120,27 @@ const MainHeader = () => {
                             <>
                                 <div className="lt-01">creator</div>
                                 <div className="lt-01">Become a supplier</div>
-                                <div className="dropdown dropdown-end text-base">
-                                    <div tabIndex={0} role="button" className="lt-01"><AiOutlineMenu /> <AiOutlineUserAdd /></div>
-                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                                        <li onClick={() => document.getElementById('my_modal_3').showModal()} className=""><a>Sign up</a></li>
-                                        <li onClick={() => document.getElementById('my_modal_3').showModal()}><a>Log in</a></li>
-                                        <li><a>Livetour your home</a></li>
-                                        <li><a>Help center</a></li>
-                                        <li className="flex flex-row gap-2 items-center justify-between"><div>Dark Mood</div> <input type="checkbox" value="synthwave" className="toggle theme-controller" /></li>
-                                    </ul>
+                                <div className="dropdown dropdown-end text-base ">
+                                    <div tabIndex={0} role="button" className="lt-01 "><AiOutlineMenu /> <AiOutlineUserAdd /></div>
+                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 mt-2 box-shadow-a shadow">
+                                <li onClick={openModal}><a>Sign up</a></li>
+                                <li onClick={openModal}><a>Log in</a></li>
+                                <li><a>Livetour your home</a></li>
+                                <li><a>Help center</a></li>
+                                <li className="flex flex-row gap-2 items-center justify-between">
+                                    <div>Dark Mode</div>
+                                    <input type="checkbox" value="synthwave" className="toggle theme-controller" />
+                                </li>
+                            </ul>
                                 </div>
-                                <LoginSignupModal />
+                                <LoginSignupModal modalRef={modalRef} />
                             </>
                         )
                     }
 
                 </div>
             </div>
-
             {/* Tab content */}
-
-
             {
                 loading ? (
                     <div className="skeleton w-full h-12 rounded-full"></div>
@@ -257,11 +248,10 @@ const MainHeader = () => {
                     </div>
                 )
             }
-
-
+            <CustomNav/>
             <PackagesMenu />
+            
         </div>
-
     );
 };
 

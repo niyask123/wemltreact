@@ -32,6 +32,50 @@ const SectionTwo = () => {
         }));
     };
 
+    const [visibleCount, setVisibleCount] = useState(10);
+    const [page, setPage] = useState(1);
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
+    useEffect(() => {
+        const updateVisibleCount = () => {
+            const width = window.innerWidth;
+            if (width >= 1536) {
+                setVisibleCount(10); // 2xl
+            } else if (width >= 1280) {
+                setVisibleCount(12); // xl
+            } else if (width >= 1024) {
+                setVisibleCount(9); // lg
+            } else if (width >= 768) {
+                setVisibleCount(10); // md
+            } else {
+                setVisibleCount(10); // default for small screens
+            }
+        };
+
+        updateVisibleCount(); // Initial check
+        window.addEventListener("resize", updateVisibleCount);
+        return () => window.removeEventListener("resize", updateVisibleCount);
+    }, []);
+
+
+
+    const handleShowMore = () => {
+        setPage((prevPage) => prevPage + 1);
+    };
+
+    const handleShowLess = () => {
+        setPage(1);
+    };
+
+    // Get the correct set of items based on page number
+    const displayedItems = places.slice(0, page * visibleCount);
+
     return (
         <div>
             <div className="p-3 pt-0 flex flex-col gap-4 bg-white container mx-auto">
@@ -55,10 +99,10 @@ const SectionTwo = () => {
                             </div>
                         ))
                         : // Display actual places once data is loaded
-                        places.map((place) => (
+                        displayedItems.map((place) => (
                             <div
                                 key={place.id}
-                                className="btn-primary flex flex-col gap-2 w-full h-[400px] rounded-2xl box-shadow-g"
+                                className="btn-primary zoom-in flex flex-col gap-2 w-full h-[400px] rounded-2xl box-shadow-g"
                             >
                                 <div className="relative w-full max-w-4xl overflow-hidden h-full">
                                     <div
@@ -102,8 +146,8 @@ const SectionTwo = () => {
                                             <span
                                                 key={index}
                                                 className={`w-2 h-2 rounded-full transition-all duration-300 ${currentImage[place.id] === index
-                                                        ? "bg-gray-900 scale-125"
-                                                        : "bg-gray-300"
+                                                    ? "bg-gray-900 scale-125"
+                                                    : "bg-gray-300"
                                                     }`}
                                             ></span>
                                         ))}
@@ -124,8 +168,31 @@ const SectionTwo = () => {
                                     </div>
                                 </div>
                             </div>
+                            
                         ))}
                 </div>
+                <div className="flex justify-center mt-4">
+                {displayedItems.length < places.length ? (
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-semibold text-black">
+                            Continue exploring farms
+                        </p>
+                        <button
+                            onClick={handleShowMore}
+                            className="px-4 py-2 rounded-2xl font-semibold bg-[#242323ee] text-white "
+                        >
+                            Show More
+                        </button>
+                    </div>
+                ) : (
+                    <button
+                        onClick={handleShowLess}
+                        className="px-4 py-2 rounded-2xl font-semibold bg-[#242323ee] text-white "
+                    >
+                        Show Less
+                    </button>
+                )}
+            </div>
             </div>
         </div>
     );

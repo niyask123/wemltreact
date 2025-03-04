@@ -27,7 +27,7 @@ const Standout = () => {
 
   return (
     <div className="flex flex-col gap-6">
-        {/* Standout Options */}
+      {/* Standout Options */}
       <div className="flex pb-5 pt-5 border-b flex-col gap-3 border-[#dddddd]">
         <div className="text-lg font-semibold">Standout options</div>
         <div className="flex flex-wrap gap-4">
@@ -35,9 +35,8 @@ const Standout = () => {
             <div
               key={option.id}
               onClick={() => toggleOption(option.id)}
-              className={`border p-3 py-2 gap-1 flex flex-row rounded-full cursor-pointer justify-center items-center transition-all ${
-                selected.includes(option.id) ? "border-blue-500" : "border-gray-300"
-              }`}
+              className={`border p-3 py-2 gap-1 flex flex-row rounded-full cursor-pointer justify-center items-center transition-all ${selected.includes(option.id) ? "border-blue-500" : "border-gray-300"
+                }`}
             >
               <img src={option.imgSrc} className="w-[20px] h-[30px]" alt={option.label} />
               <div>{option.label}</div>
@@ -60,11 +59,11 @@ const Standout = () => {
             focusable="false"
             className="w-8 h-8 fill-current"
           >
-            <path d="M16 2L20 12H30L22 18L26 28L16 22L6 28L10 18L2 12H12L16 2Z" fill="currentColor"/>
+            <path d="M16 2L20 12H30L22 18L26 28L16 22L6 28L10 18L2 12H12L16 2Z" fill="currentColor" />
           </svg>
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-1">
-              <div className="text-base font-bold">Guest Favourite</div>
+              <div className="text-base font-semibold">Guest Favourite</div>
               <div className="text-sm text-gray-600">
                 The most loved homes on LiveTour
               </div>
@@ -73,7 +72,7 @@ const Standout = () => {
         </div>
       </div>
 
-      
+
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { noticesContnet } from "../../../data/dats";
 
-
-
 const Noticebar = () => {
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -17,24 +15,17 @@ const Noticebar = () => {
   if (!isVisible) return null;
 
   return (
-    <div
-      className="container mx-auto px-3 hidden md:block transition-all duration-500 ease-in-out transform"
-      id="closeNotContainereBtn"
-    >
-      <div className="relative flex flex-col md:flex-row items-center rounded-lg justify-evenly bg-[#f7f7f7] shadow-md text-xs md:text-sm font-medium p-3 overflow-hidden w-full">
+    <div className="container mx-auto px-3 hidden md:block" id="closeNotContainereBtn">
+      <div className="relative flex flex-col md:flex-row items-center rounded-lg justify-evenly bg-[#d8effe] text-xs md:text-sm font-medium p-3 overflow-hidden w-full">
         {/* Left Content */}
         <div className="flex flex-row gap-1 items-center justify-center">
-          <img
-            src="./src/assets/images/svg/exchange.svg"
-            className="object-contain w-4 h-4 md:w-5 md:h-5"
-            alt=""
-          />
+          <img src="./src/assets/images/svg/exchange.svg" className="object-contain w-4 h-4 md:w-5 md:h-5" alt="" />
           <div>Free Exchanges</div>
         </div>
 
-        {/* Center Content (Changing Notice) */}
+        {/* Center Content (Changing Notice) with Animation */}
         <div
-          className="flex flex-row gap-1 lg:max-w-96 lg:min-w-96 md:max-w-56 md:min-w-56 items-center justify-center transition-all duration-500"
+          className="flex flex-row gap-1 lg:max-w-96 lg:min-w-96 md:max-w-56 md:min-w-56 items-center justify-center transition-all duration-500 animate-slideNotice"
         >
           <img
             src={noticesContnet[index].img}
@@ -46,11 +37,7 @@ const Noticebar = () => {
 
         {/* Right Content */}
         <div className="flex flex-row gap-1 items-center justify-center">
-          <img
-            src="./src/assets/images/svg/delivery.svg"
-            className="object-contain w-4 h-4 md:w-5 md:h-5"
-            alt=""
-          />
+          <img src="./src/assets/images/svg/delivery.svg" className="object-contain w-4 h-4 md:w-5 md:h-5" alt="" />
           <div>Same day delivery in Dubai</div>
         </div>
 

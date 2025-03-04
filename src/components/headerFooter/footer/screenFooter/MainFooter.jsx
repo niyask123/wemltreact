@@ -101,7 +101,7 @@ const MainFooter = () => {
         <div className="flex flex-col py-20 container mx-auto  gap-12 border-b p-4">
           <div className="flex flex-col container mx-auto gap-3 border-b pb-12 border-[#dddddd]">
             <div className="flex flex-col gap-3">
-              <div className="text-xl font-bold mb-4">
+              <div className="text-xl font-semibold mb-4">
                 Inspiration for future getaways
               </div>
             </div>
@@ -112,7 +112,7 @@ const MainFooter = () => {
                   key={tab.id}
                   className={`pb-2 ${
                     activeTab === tab.name
-                      ? "border-b-2 border-black text-black"
+                      ? "border-b-2 border-black zoom-in text-black"
                       : "text-gray-500"
                   }`}
                   onClick={() => setActiveTab(tab.name)}
@@ -123,12 +123,12 @@ const MainFooter = () => {
             </div>
 
             {/* Items Grid */}
-            <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-x-3 gap-y-4">
+            <div className="grid  lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-x-3 gap-y-4">
               {activeItems
                 .slice(0, expanded ? activeItems.length : 11)
                 .map((item, index) => (
-                  <div key={index} className="flex flex-col gap-0">
-                    <div className="text-sm font-bold">{item.title}</div>
+                  <div key={index} className="flex zoom-in flex-col gap-0">
+                    <div className="text-sm font-semibold">{item.title}</div>
                     <div className="text-xs text-gray-500 hover:text-black">
                       {item.description}
                     </div>
@@ -138,7 +138,7 @@ const MainFooter = () => {
               {/* Show More at 12th position */}
               {!expanded && activeItems.length > 11 && (
                 <button
-                  className="text-sm text-black underline text-start flex items-center"
+                  className="text-sm  text-black underline text-start flex items-center"
                   onClick={() => setExpanded(true)}
                 >
                   Show More
@@ -156,7 +156,7 @@ const MainFooter = () => {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
+          <div className="grid  lg:grid-cols-3 grid-cols-1 gap-6">
             {sections.map((section, index) => (
               <div
                 key={index}
@@ -166,7 +166,7 @@ const MainFooter = () => {
                 {section.links.map((link, linkIndex) => (
                   <div
                     key={linkIndex}
-                    className="text-gray-500 font-medium hover:underline cursor-pointer"
+                    className="text-gray-500 text-xs font-medium hover:underline cursor-pointer"
                   >
                     {link}
                   </div>
@@ -189,21 +189,21 @@ const MainFooter = () => {
             </div>
 
             <div className="text-xs md:text-xs font-semibold lg:text-xs flex flex-row gap-3 md:flex-row items-center justify-center">
-              <div className="flex flex-row text-nowrap gap-1">
-                ⭐ <div>English (IN)</div>
+              <div className="flex flex-row text-nowrap gap-1 items-center">
+                <img src="https://www.svgrepo.com/show/480913/earth-12.svg" className="h-3 w-3"  alt="glob" /> <div>English (IN)</div>
               </div>
               <div className="flex flex-row text-nowrap gap-1">
                 <span>₹</span>
                 <div>INR</div>
               </div>
-              <div className="flex flex-row text-nowrap gap-1">
+              <div className="md:flex hidden  flex-row text-nowrap gap-1">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/facebook-icon.svg"
+                    src="https://www.svgrepo.com/show/512120/facebook-176.svg"
                     alt="Facebook"
                     className="h-5 w-5"
                   />

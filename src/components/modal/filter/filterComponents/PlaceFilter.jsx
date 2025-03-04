@@ -19,9 +19,8 @@ const PlaceFilter = () => {
           {["Any type", "Room", "Entire home"].map((type) => (
             <div
               key={type}
-              className={`place-option rounded-lg w-full p-2 text-center cursor-pointer border-2 font-semibold transition-all ${
-    selectedType === type ? "border-black/80" : "border-gray-300"
-  }`}
+              className={`place-option rounded-lg w-full p-2 text-center cursor-pointer border-2 font-semibold transition-all ${selectedType === type ? "border-black/80" : "border-gray-300"
+                }`}
               onClick={() => handleTypeClick(type)}
             >
               {type}

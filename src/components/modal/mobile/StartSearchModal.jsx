@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { experiencesList, stayList } from '../../../data/dats';
+import SearchModalSM from '../mbModal/SearchModalSM';
 
 const StartSearchModal = ({ isOpen, onClose }) => {
     const [activeTab, setActiveTab] = useState("stays");
-    const [staysInput, setStaysInput] = useState("");
     const [experiencesInput, setExperiencesInput] = useState("");
     const [showOptions, setShowOptions] = useState(true);
     const [isInputClicked, setIsInputClicked] = useState(false);
@@ -25,9 +25,7 @@ const StartSearchModal = ({ isOpen, onClose }) => {
         };
     }, []);
 
-    const toggleOptions = () => {
-        setShowOptions((prev) => !prev);
-    };
+
 
     return (
         <div>
@@ -59,14 +57,7 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                         {activeTab === "stays" ? (
                             <div className="flex flex-col gap-3">
                                 <h2 className="text-xl font-bold">Where to?</h2>
-                                <input
-                                    type="text"
-                                    placeholder="Type here..."
-                                    className="w-full border border-gray-300 p-2 rounded-lg"
-                                    value={staysInput}
-                                    onClick={toggleOptions}
-                                    onChange={(e) => setStaysInput(e.target.value)}
-                                />
+                                <SearchModalSM/>
                                 <p className="text-xs">Suggested destinations</p>
                                 <div className="">
                                     <div
@@ -101,7 +92,6 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                                     placeholder="Type here..."
                                     className="w-full border border-gray-300 p-2 rounded-lg"
                                     value={experiencesInput}
-                                    onClick={toggleOptions}
                                     onChange={(e) => setExperiencesInput(e.target.value)}
                                 />
                                 <p className="text-xs">Suggested Experiences</p>
@@ -131,11 +121,11 @@ const StartSearchModal = ({ isOpen, onClose }) => {
 
                     <div className={`flex flex-col gap-3 mt-4 transition-all duration-300 ${showOptions ? "opacity-100 h-auto" : "opacity-0 h-0"}`}>
                         <div className="flex justify-between p-3 bg-white shadow-sm rounded-lg">
-                            <span className="text-gray-600">When</span>
+                            <span className="text-gray-400 font-medium">When</span>
                             <span className="font-semibold">Add Dates</span>
                         </div>
                         <div className="flex justify-between p-3 bg-white shadow-sm rounded-lg">
-                            <span className="text-gray-600">Who</span>
+                            <span className="text-gray-400 font-medium">Who</span>
                             <span className="font-semibold">Add Guests</span>
                         </div>
                         <div className="flex justify-between">

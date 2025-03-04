@@ -195,6 +195,28 @@ export const mobCategories = [
       newPrice: "$599",
       discount: "55% Off",
     },
+    {
+      id: 4,
+      imgSrc: "./src/assets/images/packaging/4.png",
+      title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
+      description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
+      location: "Dubai Skydive Desert",
+      rating: "4.7",
+      oldPrice: "AED 2199",
+      newPrice: "$599",
+      discount: "55% Off",
+    },
+    {
+      id: 5,
+      imgSrc: "./src/assets/images/packaging/1.png",
+      title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
+      description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
+      location: "Dubai Skydive Desert",
+      rating: "4.7",
+      oldPrice: "AED 2199",
+      newPrice: "$599",
+      discount: "55% Off",
+    },
   ];
 
   export const noticesContnet = [
@@ -224,6 +246,7 @@ export const mobCategories = [
       distance: "542 Kilometres away",
       date: "1-6 Mar",
       price: "₹21,979",
+      guestFavorite: true, // Will show "Guest favorite"
       images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/8.jpg"],
     },
     {
@@ -233,7 +256,8 @@ export const mobCategories = [
       distance: "350 Kilometres away",
       date: "10-15 Mar",
       price: "₹18,500",
-      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/8.jpg"],
+      guestFavorite: false, // Will show "Create Text"
+      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/8.jpg"],
     },
     {
       id: 3,
@@ -242,9 +266,253 @@ export const mobCategories = [
       distance: "980 Kilometres away",
       date: "5-10 Apr",
       price: "₹25,000",
-      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/8.jpg"],
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 4,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 5,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 6,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 7,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 8,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 9,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 10,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 11,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 12,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 13,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 14,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 15,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 16,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 17,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 18,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 19,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 20,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 21,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 22,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 23,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 24,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 25,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 26,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+    },
+    {
+      id: 27,
+      location: "Mumbai, India",
+      rating: 4.9,
+      distance: "980 Kilometres away",
+      date: "5-10 Apr",
+      price: "₹25,000",
+      guestFavorite: false, // Will show "Guest favorite"
+      images: ["./src/assets/images/packaging/14.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
     }
-  ];
+    
+    
+];
+
 
   export const sectionThreeImages = [
     { id: 1, src: ["../assets/images/packaging/14.jpg", "../assets/images/packaging/15.jpg"] },

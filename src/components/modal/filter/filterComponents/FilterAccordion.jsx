@@ -15,7 +15,7 @@ const FilterAccordion = () => {
     { img: guestHouseImg, label: "Guest House" },
     { img: hotelImg, label: "Hotel" },
   ];
-  
+
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const toggleAccordion = (id) => {
@@ -39,17 +39,17 @@ const FilterAccordion = () => {
           </button>
         </h2>
         <div className={`transition-all duration-300 ${openAccordion === 1 ? "max-h-screen" : "max-h-0 overflow-hidden"}`}>
-        <div className="flex flex-wrap gap-3 px-2">
-  {propertyTypes.map((item, index) => (
-    <div
-      key={index}
-      className="border border-gray-300 p-3 py-2  gap-1 flex flex-row rounded-full mb-3 cursor-pointer justify-center items-center"
-    >
-      <img src={item.img} className="w-[24px] h-[22px]" alt={item.label} />
-      <div>{item.label}</div>
-    </div>
-  ))}
-</div>
+          <div className="flex flex-wrap gap-3 px-2">
+            {propertyTypes.map((item, index) => (
+              <div
+                key={index}
+                className="border border-gray-300 p-3 py-2  gap-1 flex flex-row rounded-full mb-3 cursor-pointer justify-center items-center"
+              >
+                <img src={item.img} className="w-[24px] h-[22px]" alt={item.label} />
+                <div>{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

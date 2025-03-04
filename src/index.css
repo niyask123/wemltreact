@@ -2,7 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.lt-01{
-    @apply border h-[3rem] md:h-[2.5rem] justify-center items-center font-semibold rounded-full border-[#dddddd] flex flex-row gap-1 px-3.5 hover:cursor-pointer
+.lt-01 {
+    @apply border h-[3rem] md:h-[2.5rem] justify-center items-center font-semibold rounded-full 
+           border-[#dddddd] flex flex-row gap-1 px-3.5 hover:cursor-pointer 
+           hover:border-[#4e4e4eee] transition-all duration-300 hover:bg-[#f2f2f2d5];
 }
 
+.lt-02-b-c{
+    @apply hover:border-[#4e4e4eee] transition-all duration-300 hover:bg-[#f2f2f2d5];
+}
+
+.text-black{
+    color: #4e4e4eee ;
+}
+
+@layer utilities {
+    @keyframes slideNotice {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+  
+    .animate-slideNotice {
+      animation: slideNotice 3s ease-in-out infinite;
+    }
+  }

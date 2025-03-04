@@ -41,8 +41,6 @@ const PackagesMenu = () => {
                     <AiOutlineArrowLeft />
                 </button>
             )}
-
-
             {
                 loading ? (
                     <div className="skeleton w-full h-10"></div>
@@ -82,25 +80,7 @@ const PackagesMenu = () => {
                         >
                             <AiOutlineArrowRight />
                         </button>
-                        <button
-                            className="p-2 px-4 border border-[#dddddd] mr-3 text-xs hidden :flex flex-row items-center justify-center font-medium rounded-2xl gap-2 h-[3.1rem]"
-                            onClick={() => document.getElementById('packageModalMenu').showModal()}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 32 32"
-                                aria-hidden="true"
-                                role="presentation"
-                                focusable="false"
-                                className="w-[15px] h-[15px] stroke-current stroke-[3]"
-                            >
-                                <path
-                                    fill="none"
-                                    d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"
-                                ></path>
-                            </svg>
-                            Filters
-                        </button>
+                        
                         <MainFilter  />
                         <div className="justify-between  p-3 h-full hidden lg:flex flex-row border border-[#dddddd] rounded-2xl gap-3">
                             <div className="flex justify-between flex-row gap-3 items-center">
@@ -110,13 +90,10 @@ const PackagesMenu = () => {
                                 <input type="checkbox" className="toggle" />
                             </div>
                         </div>
+                        
                     </>
                 )
             }
-
-
-
-
         </div>
     );
 };
