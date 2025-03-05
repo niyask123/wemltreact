@@ -9,25 +9,25 @@ const Amenities = () => {
   };
 
   const essentials = [
-    { img: "wifi.svg", label: "Wifi" },
-    { img: "kitchen.svg", label: "Kitchen" },
-    { img: "washing-machine.svg", label: "Washing machine" },
-    { img: "air-conditioning.svg", label: "Air conditioning" },
-    { img: "fader-heater.svg", label: "Heating" },
-    { img: "workspace.svg", label: "Dedicated workspace" },
-    { img: "tv.svg", label: "TV" },
-    { img: "hair-dryer.svg", label: "Hair dryer" },
-    { img: "iron.svg", label: "Iron" },
+    { img: "/images/filter/wifi.svg", label: "Wifi" },
+    { img: "/images/filter/kitchen.svg", label: "Kitchen" },
+    { img: "/images/filter/washing-machine.svg", label: "Washing machine" },
+    { img: "/images/filter/air-conditioning.svg", label: "Air conditioning" },
+    { img: "/images/filter/fader-heater.svg", label: "Heating" },
+    { img: "/images/filter/workspace.svg", label: "Dedicated workspace" },
+    { img: "/images/filter/tv.svg", label: "TV" },
+    { img: "/images/filter/hair-dryer.svg", label: "Hair dryer" },
+    { img: "/images/filter/iron.svg", label: "Iron" },
   ];
 
   const features = [
-    { img: "pool.svg", label: "Pool" },
-    { img: "hot-tub.svg", label: "Hot tub" },
-    { img: "parking.svg", label: "Free parking" },
-    { img: "ev-charger.svg", label: "EV charger" },
-    { img: "cot.svg", label: "Cot" },
-    { img: "king-bed.svg", label: "King bed" },
-    { img: "gym.svg", label: "Gym" },
+    { img: "/images/filter/pool.svg", label: "Pool" },
+    { img: "/images/filter/hot-tub.svg", label: "Hot tub" },
+    { img: "/images/filter/parking.svg", label: "Free parking" },
+    { img: "/images/filter/ev-charger.svg", label: "EV charger" },
+    { img: "/images/filter/cot.svg", label: "Cot" },
+    { img: "/images/filter/king-bed.svg", label: "King bed" },
+    { img: "/images/filter/gym.svg", label: "Gym" },
   ];
 
   return (
@@ -43,7 +43,7 @@ const Amenities = () => {
                 className="border p-3 py-1.5 gap-1 flex flex-row rounded-full border-[#dddddd] justify-center items-center"
               >
                 <img
-                  src={`P/images/filter/${item.img}`}
+                  src={`${item.img}`}
                   className="w-[20px] h-[30px]"
                   alt={item.label}
                 />
@@ -62,7 +62,7 @@ const Amenities = () => {
                     className="border p-3 py-1.5 gap-1 flex flex-row rounded-full border-[#dddddd] justify-center items-center"
                   >
                     <img
-                      src={`P/images/filter/${item.img}`}
+                      src={`${item.img}`}
                       className="w-[24px] h-[30px]"
                       alt={item.label}
                     />

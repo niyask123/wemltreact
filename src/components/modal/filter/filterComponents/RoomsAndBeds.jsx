@@ -25,14 +25,14 @@ const RoomsAndBedsFilter = () => {
                 className="cursor-pointer text-2xl rounded-full border px-2 flex items-center border-[#dddddd]"
                 onClick={() => updateCount(type, false)}
               >
-                <img src="src\assets\images\svg\minus.svg" className="w-[15px] h-[30px]" alt="Decrease" />
+                <img src="\images\svg\minus.svg" className="w-[15px] h-[30px]" alt="Decrease" />
               </span>
               <span className="w-8 font-bold text-center">{count}</span>
               <span
                 className="cursor-pointer text-2xl rounded-full border px-2 flex items-center border-[#dddddd]"
                 onClick={() => updateCount(type, true)}
               >
-                <img src="src\assets\images\svg\plus.svg" className="w-[15px] h-[30px]" alt="Increase" />
+                <img src="\images\svg\plus.svg" className="w-[15px] h-[30px]" alt="Increase" />
               </span>
             </div>
           </div>

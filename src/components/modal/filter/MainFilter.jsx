@@ -20,7 +20,7 @@ const MainFilter = () => {
         <div>
             {/* Button to Open Modal */}
             <button
-                className="p-2 px-4 border border-[#dddddd] mr-3 text-xs hidden md:flex flex-row items-center justify-center font-medium rounded-2xl gap-2 h-[3.1rem]"
+                className="p-2 lt-02-b-c px-4 border border-[#dddddd] mr-3 text-xs hidden md:flex flex-row items-center justify-center font-medium rounded-2xl gap-2 h-[3.1rem]"
                 onClick={openModal}
             >
                 <svg

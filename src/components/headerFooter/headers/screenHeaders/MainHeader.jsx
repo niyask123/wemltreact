@@ -58,14 +58,14 @@ const MainHeader = () => {
                         ) : (
                             <>
                                 <div
-                                    className={`cursor-pointer  rounded-full hover:bg-gray-100 p-2 px-4  ${activeTab === "tab1" ? " font-semibold" : ""
+                                    className={`cursor-pointer  rounded-full hover:bg-gray-100 p-2 px-4  ${activeTab === "tab1" ? " font-semibold bg-gray-1 p-2 px-4" : ""
                                         }`}
                                     onClick={() => setActiveTab("tab1")}
                                 >
                                     Stays
                                 </div>
                                 <div
-                                    className={`cursor-pointer  rounded-full hover:bg-gray-100 p-2 px-4  ${activeTab === "tab2" ? " font-semibold" : ""
+                                    className={`cursor-pointer  rounded-full hover:bg-gray-100 p-2 px-4  ${activeTab === "tab2" ? " font-semibold bg-gray-1 p-2 px-4" : ""
                                         }`}
                                     onClick={() => setActiveTab("tab2")}
                                 >
@@ -79,7 +79,7 @@ const MainHeader = () => {
                 {/* New Content when scrolling DOWN */}
                 <div className={`zoom-in  flex gap-3 transition-all duration-300 ${showOptions ? "hidden" : "block"}`}>
                     <div>
-                        <div onClick={() => document.getElementById('customNav').showModal()} className="text-xs font-medium max-w-[850px]  lg:max-w-[650px] rounded-full shadow-md border border-[#DDDDDD] flex flex-row w-full justify-between items-center container mx-auto">
+                        <div onClick={() => document.getElementById('customNav').showModal()} className="text-xs font-medium max-w-[850px]   lg:max-w-[650px] rounded-full shadow-md border border-[#DDDDDD] flex flex-row w-full justify-between items-center container mx-auto">
                             <div className="flex-1">
                                 <button className="dropdown-btn text-nowrap px-3 pl-6 py-3 flex flex-col rounded-full hover:bg-gray-200 transition-all duration-200">
                                     Anywhere
@@ -112,7 +112,7 @@ const MainHeader = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row md:gap-2 lg:gap-3 text-xs ">
+                <div className="flex flex-row md:gap-2 lg:gap-3 text-sm ">
                     {
                         loading ? (
                             <div className="skeleton w-40 h-6"></div>
