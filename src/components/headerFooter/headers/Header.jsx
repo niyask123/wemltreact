@@ -6,12 +6,12 @@ import MainHeader from './screenHeaders/MainHeader'
 const Header = () => {
   return (
     <div>
-      
-      <SmHeader/>
+
+      <SmHeader />
       <div className="md:h-[15rem] h-[8rem]">
-      <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-      <MainHeader/>
-      </div>
+        <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+          <MainHeader />
+        </div>
       </div>
     </div>
   )

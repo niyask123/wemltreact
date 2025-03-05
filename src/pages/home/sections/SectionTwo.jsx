@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { places } from "../../../data/dats";
+// import { places } from "../../../data/dats";
 import loveRed from "/images/svg/lover-r.svg";
 import loveBlack from "/images/svg/love-b.svg";
+import usePackageStore from "../../../store/usePackagesStore";
+import { useNavigate } from "react-router-dom";
 
 const SectionTwo = () => {
+    const { places = [] } = usePackageStore(); // Ensure `places` is at least an empty array
+    const navigate = useNavigate();
     const [liked, setLiked] = useState({});
     const [currentImage, setCurrentImage] = useState(
         places.reduce((acc, place) => ({ ...acc, [place.id]: 0 }), {}) // Initialize with 0 for each place
     );
     const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         // Simulating a loading delay for fetching data
@@ -102,7 +107,12 @@ const SectionTwo = () => {
                         displayedItems.map((place) => (
                             <div
                                 key={place.id}
-                                className="btn-primary zoom-in flex flex-col gap-2 w-full h-[400px] rounded-2xl box-shadow-g"
+                                onClick={() =>
+                                    place.location
+                                        ? navigate(`/package/${place.location.toLowerCase().replace(/\s+/g, "-")}`)
+                                        : null
+                                }
+                                className="btn-primary relative zoom-in flex flex-col gap-2 w-full h-[400px] rounded-2xl box-shadow-g"
                             >
                                 <div className="relative w-full max-w-4xl overflow-hidden h-full">
                                     <div
@@ -123,7 +133,10 @@ const SectionTwo = () => {
                                     </div>
                                     <div
                                         className="like-btn absolute top-4 right-4 text-xl cursor-pointer"
-                                        onClick={() => toggleLike(place.id)}
+                                        onClick={(e) => {
+                                            e.stopPropagation(); // Prevents the click event from reaching the parent
+                                            toggleLike(place.id);
+                                        }}
                                     >
                                         <img
                                             src={loveBlack}
@@ -168,31 +181,31 @@ const SectionTwo = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         ))}
                 </div>
-                <div className="flex justify-center mt-4">
-                {displayedItems.length < places.length ? (
-                    <div className="flex flex-col gap-3">
-                        <p className="text-lg font-semibold text-black">
-                            Continue exploring farms
-                        </p>
+                <div className="flex justify-center my-4">
+                    {displayedItems.length < places.length ? (
+                        <div className="flex flex-col gap-3">
+                            <p className="text-lg font-semibold text-black">
+                                Continue exploring farms
+                            </p>
+                            <button
+                                onClick={handleShowMore}
+                                className="px-4 py-2 rounded-2xl font-semibold bg-[#242323ee] text-white "
+                            >
+                                Show More
+                            </button>
+                        </div>
+                    ) : (
                         <button
-                            onClick={handleShowMore}
+                            onClick={handleShowLess}
                             className="px-4 py-2 rounded-2xl font-semibold bg-[#242323ee] text-white "
                         >
-                            Show More
+                            Show Less
                         </button>
-                    </div>
-                ) : (
-                    <button
-                        onClick={handleShowLess}
-                        className="px-4 py-2 rounded-2xl font-semibold bg-[#242323ee] text-white "
-                    >
-                        Show Less
-                    </button>
-                )}
-            </div>
+                    )}
+                </div>
             </div>
         </div>
     );

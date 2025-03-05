@@ -6,7 +6,7 @@ const CustomNav = () => {
     return (
         <div>
             <dialog id="customNav" className="modal px-4 md:px-0 flex-col flex w-full">
-                <div className="modal-box w-full max-h-40 min-h-40 max-w-full pt-5 p-6 rounded-none bg-white  shadow-lg">
+                <div className="modal-box w-full overflow-hidden max-w-full pt-5 p-6 rounded-none bg-white  shadow-lg">
                     {/* Tabs: "Stay" and "Experiences" */}
                     <div className={`flex gap-0 transition-all duration-300 justify-center zoom-in ${showOptions ? "block" : "hidden"}`}>
                         <div
