@@ -43,7 +43,7 @@ const Amenities = () => {
                 className="border p-3 py-1.5 gap-1 flex flex-row rounded-full border-[#dddddd] justify-center items-center"
               >
                 <img
-                  src={`./src/assets/images/filter/${item.img}`}
+                  src={`P/images/filter/${item.img}`}
                   className="w-[20px] h-[30px]"
                   alt={item.label}
                 />
@@ -62,7 +62,7 @@ const Amenities = () => {
                     className="border p-3 py-1.5 gap-1 flex flex-row rounded-full border-[#dddddd] justify-center items-center"
                   >
                     <img
-                      src={`./src/assets/images/filter/${item.img}`}
+                      src={`P/images/filter/${item.img}`}
                       className="w-[24px] h-[30px]"
                       alt={item.label}
                     />

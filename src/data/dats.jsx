@@ -164,7 +164,7 @@ export const mobCategories = [
   export const cardData = [
     {
       id: 1,
-      imgSrc: "./src/assets/images/packaging/1.png",
+      imgSrc: "/images/packaging/1.png",
       title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
       description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
       location: "Dubai Skydive Desert",
@@ -175,7 +175,7 @@ export const mobCategories = [
     },
     {
       id: 2,
-      imgSrc: "./src/assets/images/packaging/2.webp",
+      imgSrc: "/images/packaging/2.webp",
       title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
       description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
       location: "Dubai Skydive Desert",
@@ -186,7 +186,7 @@ export const mobCategories = [
     },
     {
       id: 3,
-      imgSrc: "./src/assets/images/packaging/3.png",
+      imgSrc: "/images/packaging/3.png",
       title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
       description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
       location: "Dubai Skydive Desert",
@@ -197,7 +197,7 @@ export const mobCategories = [
     },
     {
       id: 4,
-      imgSrc: "./src/assets/images/packaging/4.png",
+      imgSrc: "/images/packaging/4.png",
       title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
       description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
       location: "Dubai Skydive Desert",
@@ -208,7 +208,7 @@ export const mobCategories = [
     },
     {
       id: 5,
-      imgSrc: "./src/assets/images/packaging/1.png",
+      imgSrc: "/images/packaging/1.png",
       title: "2 For 1 Hot Air Balloon Offer: 2 People Fly for the Price of 1",
       description: "Lift off together and take in stunning, panoramic views of the Dubai Desert!",
       location: "Dubai Skydive Desert",
@@ -247,7 +247,7 @@ export const mobCategories = [
       date: "1-6 Mar",
       price: "₹21,979",
       guestFavorite: true, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/6.jpg", "/images/packaging/7.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 2,
@@ -257,7 +257,7 @@ export const mobCategories = [
       date: "10-15 Mar",
       price: "₹18,500",
       guestFavorite: false, // Will show "Create Text"
-      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/8.jpg", "/images/packaging/7.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 3,
@@ -267,7 +267,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/9.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 4,
@@ -277,7 +277,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/10.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 5,
@@ -287,7 +287,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/11.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 6,
@@ -297,7 +297,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/13.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 7,
@@ -307,7 +307,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/11.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 8,
@@ -317,7 +317,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/10.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 9,
@@ -327,7 +327,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/9.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 10,
@@ -337,7 +337,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/8.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 11,
@@ -347,7 +347,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/7.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 12,
@@ -357,7 +357,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/13.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 13,
@@ -367,7 +367,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/13.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 14,
@@ -377,7 +377,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/6.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 15,
@@ -387,7 +387,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/7.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 16,
@@ -397,7 +397,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/8.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 17,
@@ -407,7 +407,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/9.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 18,
@@ -417,7 +417,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/10.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 19,
@@ -427,7 +427,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/11.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 20,
@@ -437,7 +437,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/13.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/13.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 21,
@@ -447,7 +447,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/6.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 22,
@@ -457,7 +457,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/7.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/7.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 23,
@@ -467,7 +467,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/8.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/8.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 24,
@@ -477,7 +477,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/10.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/10.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 25,
@@ -487,7 +487,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/9.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/9.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 26,
@@ -497,7 +497,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/11.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/11.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     },
     {
       id: 27,
@@ -507,7 +507,7 @@ export const mobCategories = [
       date: "5-10 Apr",
       price: "₹25,000",
       guestFavorite: false, // Will show "Guest favorite"
-      images: ["./src/assets/images/packaging/14.jpg", "./src/assets/images/packaging/6.jpg", "./src/assets/images/packaging/8.jpg"],
+      images: ["/images/packaging/14.jpg", "/images/packaging/6.jpg", "/images/packaging/8.jpg"],
     }
     
     
@@ -515,9 +515,9 @@ export const mobCategories = [
 
 
   export const sectionThreeImages = [
-    { id: 1, src: ["../assets/images/packaging/14.jpg", "../assets/images/packaging/15.jpg"] },
-    { id: 2, src: ["../assets/images/packaging/13.jpg", "../assets/images/packaging/14.jpg"] },
-    { id: 3, src: ["../assets/images/packaging/15.jpg", "../assets/images/packaging/13.jpg"] },
+    { id: 1, src: ["/images/packaging/14.jpg", "/images/packaging/15.jpg"] },
+    { id: 2, src: ["/images/packaging/13.jpg", "/images/packaging/14.jpg"] },
+    { id: 3, src: ["/images/packaging/15.jpg", "/images/packaging/13.jpg"] },
   ];
 
 
@@ -525,9 +525,9 @@ export const mobCategories = [
       {
         id: 1,
         images: [
-          "./src/assets/images/packaging/9.jpg",
-          "./src/assets/images/packaging/8.jpg",
-          "./src/assets/images/packaging/7.jpg",
+          "/images/packaging/9.jpg",
+          "/images/packaging/8.jpg",
+          "/images/packaging/7.jpg",
         ],
         title: "Still unsure? The gift of choice is always a winner!",
         description:
@@ -537,9 +537,9 @@ export const mobCategories = [
       {
         id: 2,
         images: [
-          "./src/assets/images/packaging/7.jpg",
-          "./src/assets/images/packaging/8.jpg",
-          "./src/assets/images/packaging/9.jpg",
+          "/images/packaging/7.jpg",
+          "/images/packaging/8.jpg",
+          "/images/packaging/9.jpg",
         ],
         title: "An exclusive experience awaits you!",
         description:
@@ -549,9 +549,9 @@ export const mobCategories = [
       {
         id: 3,
         images: [
-          "./src/assets/images/packaging/8.jpg",
-          "./src/assets/images/packaging/8.jpg",
-          "./src/assets/images/packaging/9.jpg",
+          "/images/packaging/8.jpg",
+          "/images/packaging/8.jpg",
+          "/images/packaging/9.jpg",
         ],
         title: "An exclusive experience awaits you!",
         description:
@@ -561,9 +561,9 @@ export const mobCategories = [
       {
         id: 4,
         images: [
-          "./src/assets/images/packaging/8.jpg",
-          "./src/assets/images/packaging/8.jpg",
-          "./src/assets/images/packaging/9.jpg",
+          "/images/packaging/8.jpg",
+          "/images/packaging/8.jpg",
+          "/images/packaging/9.jpg",
         ],
         title: "An exclusive experience awaits you!",
         description:

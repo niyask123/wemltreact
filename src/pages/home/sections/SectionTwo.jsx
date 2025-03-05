@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { places } from "../../../data/dats";
-import loveRed from "../../../assets/images/svg/lover-r.svg";
-import loveBlack from "../../../assets/images/svg/love-b.svg";
+import loveRed from "/images/svg/lover-r.svg";
+import loveBlack from "/images/svg/love-b.svg";
 
 const SectionTwo = () => {
     const [liked, setLiked] = useState({});

@@ -11,7 +11,7 @@ const MainHeader = () => {
     const openModal = () => {
         if (modalRef.current) modalRef.current.showModal();
     };
-    
+
 
     const [showOptions, setShowOptions] = useState(true);
     const [activeTab, setActiveTab] = useState("tab1");
@@ -39,7 +39,7 @@ const MainHeader = () => {
                             <div className="skeleton w-36 h-10"></div>
                         ) : (
                             <img
-                                src="src/assets/images/logo/logo.png"
+                                src="/images/logo/logo.png"
                                 className="object-contain lg:w-[150px] w-32"
                                 alt="Logo"
                             />
@@ -77,9 +77,9 @@ const MainHeader = () => {
                 </div>
 
                 {/* New Content when scrolling DOWN */}
-                <div  className={`zoom-in  flex gap-3 transition-all duration-300 ${showOptions ? "hidden" : "block"}`}>
+                <div className={`zoom-in  flex gap-3 transition-all duration-300 ${showOptions ? "hidden" : "block"}`}>
                     <div>
-                        <div onClick={()=>document.getElementById('customNav').showModal()} className="text-xs font-medium max-w-[850px]  lg:max-w-[650px] rounded-full shadow-md border border-[#DDDDDD] flex flex-row w-full justify-between items-center container mx-auto">
+                        <div onClick={() => document.getElementById('customNav').showModal()} className="text-xs font-medium max-w-[850px]  lg:max-w-[650px] rounded-full shadow-md border border-[#DDDDDD] flex flex-row w-full justify-between items-center container mx-auto">
                             <div className="flex-1">
                                 <button className="dropdown-btn text-nowrap px-3 pl-6 py-3 flex flex-col rounded-full hover:bg-gray-200 transition-all duration-200">
                                     Anywhere
@@ -101,7 +101,7 @@ const MainHeader = () => {
                                 <div className="relative flex flex-col">
                                     <button className="p-2 bg-[#ef1b27] rounded-full">
                                         <img
-                                            src="src/assets/images/svg/searchsubmit.svg"
+                                            src="/images/svg/searchsubmit.svg"
                                             className="object-contain w-4 h-4"
                                             alt="Search"
                                         />
@@ -123,15 +123,25 @@ const MainHeader = () => {
                                 <div className="dropdown dropdown-end text-base ">
                                     <div tabIndex={0} role="button" className="lt-01 "><AiOutlineMenu /> <AiOutlineUserAdd /></div>
                                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 mt-2 box-shadow-a shadow">
-                                <li onClick={openModal}><a>Sign up</a></li>
-                                <li onClick={openModal}><a>Log in</a></li>
-                                <li><a>Livetour your home</a></li>
-                                <li><a>Help center</a></li>
-                                <li className="flex flex-row gap-2 items-center justify-between">
-                                    <div>Dark Mode</div>
-                                    <input type="checkbox" value="synthwave" className="toggle theme-controller" />
-                                </li>
-                            </ul>
+                                        <li onClick={openModal}><a>Sign up</a></li>
+                                        <li onClick={openModal}><a>Log in</a></li>
+                                        <li><a>Livetour your home</a></li>
+                                        <li><a>Help center</a></li>
+                                        <li className="flex flex-row gap-2 items-center justify-between">
+                                            <div>Dark Mode</div>
+                                            <input
+                                                type="checkbox"
+                                                className="toggle theme-controller"
+                                                onChange={(e) => {
+                                                    document.documentElement.setAttribute(
+                                                        "data-theme",
+                                                        e.target.checked ? "dark" : "light"
+                                                    );
+                                                }}
+                                            />
+                                        </li>
+
+                                    </ul>
                                 </div>
                                 <LoginSignupModal modalRef={modalRef} />
                             </>
@@ -190,7 +200,7 @@ const MainHeader = () => {
                                     <div className="relative flex flex-col">
                                         <button className="p-3 bg-[#ef1b27] rounded-full">
                                             <img
-                                                src="src/assets/images/svg/searchsubmit.svg"
+                                                src="/images/svg/searchsubmit.svg"
                                                 className="object-contain w-4 h-4"
                                                 alt="Search"
                                             />
@@ -236,7 +246,7 @@ const MainHeader = () => {
                                     <div className="relative flex flex-col">
                                         <button className="p-3 bg-[#ef1b27] rounded-full">
                                             <img
-                                                src="src/assets/images/svg/searchsubmit.svg"
+                                                src="/images/svg/searchsubmit.svg"
                                                 className="object-contain w-4 h-4"
                                                 alt="Search"
                                             />
@@ -248,9 +258,9 @@ const MainHeader = () => {
                     </div>
                 )
             }
-            <CustomNav/>
+            <CustomNav />
             <PackagesMenu />
-            
+
         </div>
     );
 };

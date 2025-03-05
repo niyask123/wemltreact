@@ -29,7 +29,7 @@ const FirstSection = () => {
       <div className="container mx-auto">
         <div className="lg:grid lg:grid-cols-4 flex flex-col gap-4 p-3 py-6">
           <div
-            className="col-span-1 lg:justify-start lg:pt-10 justify-center lg:items-start items-center flex flex-col p-3 md:p-6 lg:p-6 rounded-lg gap-1 md:gap-3 lg:gap-1  bg-[url('/src\assets\images\main\lt-1.png')] bg-cover bg-center bg-no-repeat"
+            className="col-span-1 lg:justify-start lg:pt-10 justify-center lg:items-start items-center flex flex-col p-3 md:p-6 lg:p-6 rounded-lg gap-1 md:gap-3 lg:gap-1  bg-[url('/images/main/lt-1.png')] bg-cover bg-center bg-no-repeat"
           >
             <div className="text-[#ef1b27] text-xl font-semibold">Our Best Sellers</div>
             <div className="text-xs md:text-sm font-medium">
@@ -88,12 +88,12 @@ const FirstSection = () => {
                               <div className="flex flex-col text-[11px]">
                                 <div className="flex justify-between items-center w-full">
                                   <div className="flex gap-1">
-                                    <span><img src="./src/assets/images/svg/people-blue.svg" className="object-contain w-2.5" alt="" /></span> People
+                                    <span><img src="/images/svg/people-blue.svg" className="object-contain w-2.5" alt="" /></span> People
                                   </div>
-                                  <div className="flex flex-row gap-1 w-[65%] overflow-hidden text-ellipsis whitespace-nowrap justify-end"><img src="./src/assets/images/svg/people-blue.svg" className="object-contain w-2.5" alt="" /> {card.location}</div>
+                                  <div className="flex flex-row gap-1 w-[65%] overflow-hidden text-ellipsis whitespace-nowrap justify-end"><img src="/images/svg/people-blue.svg" className="object-contain w-2.5" alt="" /> {card.location}</div>
                                 </div>
                                 <div className="flex gap-1">
-                                  <span><img src="./src/assets/images/svg/rating-star-green.svg" className="object-contain w-2.5" alt="" /></span> <span className="font-bold">{card.rating}</span>5 (5)
+                                  <span><img src="/images/svg/rating-star-green.svg" className="object-contain w-2.5" alt="" /></span> <span className="font-bold">{card.rating}</span>5 (5)
                                 </div>
                               </div>
                             </div>

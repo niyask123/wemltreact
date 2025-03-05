@@ -3,10 +3,10 @@
 
 
 import { useState } from "react";
-import houseImg from "../../../../assets/images/filter/house.svg";
-import flatImg from "../../../../assets/images/filter/flat.svg";
-import guestHouseImg from "../../../../assets/images/filter/guest-house.svg";
-import hotelImg from "../../../../assets/images/filter/hotel.svg";
+import houseImg from "/images/filter/house.svg";
+import flatImg from "/images/filter/flat.svg";
+import guestHouseImg from "/images/filter/guest-house.svg";
+import hotelImg from "/images/filter/hotel.svg";
 
 const FilterAccordion = () => {
   const propertyTypes = [

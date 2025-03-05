@@ -19,7 +19,7 @@ const Noticebar = () => {
       <div className="relative flex flex-col md:flex-row items-center rounded-lg justify-evenly bg-[#d8effe] text-xs md:text-sm font-medium p-3 overflow-hidden w-full">
         {/* Left Content */}
         <div className="flex flex-row gap-1 items-center justify-center">
-          <img src="./src/assets/images/svg/exchange.svg" className="object-contain w-4 h-4 md:w-5 md:h-5" alt="" />
+          <img src="/images/svg/exchange.svg" className="object-contain w-4 h-4 md:w-5 md:h-5" alt="" />
           <div>Free Exchanges</div>
         </div>
 
@@ -37,7 +37,7 @@ const Noticebar = () => {
 
         {/* Right Content */}
         <div className="flex flex-row gap-1 items-center justify-center">
-          <img src="./src/assets/images/svg/delivery.svg" className="object-contain w-4 h-4 md:w-5 md:h-5" alt="" />
+          <img src="/images/svg/delivery.svg" className="object-contain w-4 h-4 md:w-5 md:h-5" alt="" />
           <div>Same day delivery in Dubai</div>
         </div>
 

@@ -45,16 +45,16 @@ const LoginSignupModal = ({ modalRef }) => {
 
           <div className="grid grid-cols-2 gap-2">
             <button className="btn lt-02-b-c w-full flex gap-2">
-              <img src="./src/assets/images/svg/google.svg" className="w-5 h-5" alt="Google" /> Google
+              <img src="/images/svg/google.svg" className="w-5 h-5" alt="Google" /> Google
             </button>
             <button className="btn lt-02-b-c w-full flex gap-2">
-              <img src="./src/assets/images/svg/apple-logo.svg" className="w-5 h-5" alt="Apple" /> Apple
+              <img src="/images/svg/apple-logo.svg" className="w-5 h-5" alt="Apple" /> Apple
             </button>
             <button className="btn lt-02-b-c w-full flex gap-2">
-              <img src="./src/assets/images/svg/mail.svg" className="w-5 h-5" alt="Email" /> Email
+              <img src="/images/svg/mail.svg" className="w-5 h-5" alt="Email" /> Email
             </button>
             <button className="btn lt-02-b-c w-full flex gap-2">
-              <img src="./src/assets/images/svg/facebook.svg" className="w-5 h-5" alt="Facebook" /> Facebook
+              <img src="/images/svg/facebook.svg" className="w-5 h-5" alt="Facebook" /> Facebook
             </button>
           </div>
         </div>

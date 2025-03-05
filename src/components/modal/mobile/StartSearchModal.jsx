@@ -131,7 +131,7 @@ const StartSearchModal = ({ isOpen, onClose }) => {
                         <div className="flex justify-between">
                             <button className="bg-gray-700 text-white px-5 py-2 rounded-lg">Clear</button>
                             <button className="bg-red-600 text-white px-5 py-2 flex items-center gap-1 rounded-lg">
-                                <img src="/src/assets/images/svg/searchsubmit.svg" className="h-4" alt="Search" /> Search
+                                <img src="/images/svg/searchsubmit.svg" className="h-4" alt="Search" /> Search
                             </button>
                         </div>
                     </div>

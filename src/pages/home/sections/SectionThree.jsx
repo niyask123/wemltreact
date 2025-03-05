@@ -78,14 +78,14 @@ const CarouselItem = ({ packageData }) => {
             onClick={toggleLike}
           >
             <img
-              src="./src/assets/images/svg/love-b.svg"
+              src="/images/svg/love-b.svg"
               className={`love-b object-contain w-[20px] h-[20px] transition-opacity duration-300 ${
                 isLiked ? "opacity-0" : "opacity-100"
               }`}
               alt="black love"
             />
             <img
-              src="./src/assets/images/svg/lover-r.svg"
+              src="/images/svg/lover-r.svg"
               className={`love-r absolute top-0 left-0 object-contain w-[20px] h-[20px] transition-opacity duration-300 ${
                 isLiked ? "opacity-100" : "opacity-0"
               }`}

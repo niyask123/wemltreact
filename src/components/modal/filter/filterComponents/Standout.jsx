@@ -20,9 +20,9 @@ const Standout = () => {
   };
 
   const options = [
-    { id: "instant", label: "Instant book", imgSrc: "./src/assets/images/filter/instant.svg" },
-    { id: "checkin", label: "Self check-in", imgSrc: "./src/assets/images/filter/check-in.svg" },
-    { id: "pets", label: "Allows pets", imgSrc: "./src/assets/images/filter/pets.svg" },
+    { id: "instant", label: "Instant book", imgSrc: "/images/filter/instant.svg" },
+    { id: "checkin", label: "Self check-in", imgSrc: "/images/filter/check-in.svg" },
+    { id: "pets", label: "Allows pets", imgSrc: "/images/filter/pets.svg" },
   ];
 
   return (

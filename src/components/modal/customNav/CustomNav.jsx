@@ -73,7 +73,7 @@ const CustomNav = () => {
                                         <div className="relative flex flex-col">
                                             <button className="p-3 bg-[#ef1b27] rounded-full">
                                                 <img
-                                                    src="src/assets/images/svg/searchsubmit.svg"
+                                                    src="/images/svg/searchsubmit.svg"
                                                     className="object-contain w-4 h-4"
                                                     alt="Search"
                                                 />
@@ -119,7 +119,7 @@ const CustomNav = () => {
                                         <div className="relative flex flex-col">
                                             <button className="p-3 bg-[#ef1b27] rounded-full">
                                                 <img
-                                                    src="src/assets/images/svg/searchsubmit.svg"
+                                                    src="/images/svg/searchsubmit.svg"
                                                     className="object-contain w-4 h-4"
                                                     alt="Search"
                                                 />
