@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/headerFooter/headers/Header";
 import Footer from "../components/headerFooter/footer/Footer";
 import PackageHeader from "../components/headerFooter/headers/PackageHeader";
+import SmFooterPayment from "../components/Payments/SmFooterPayment";
 
 export default function UserLayout() {
   const location = useLocation(); // Get current route
@@ -15,7 +16,7 @@ export default function UserLayout() {
       <div className="">
         <Outlet />
       </div>
-      <Footer />
+      {isPackageDetailsPage ? <SmFooterPayment /> : <Footer />}
     </>
   );
 }

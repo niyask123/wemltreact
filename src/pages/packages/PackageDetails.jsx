@@ -2,6 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import usePackageStore from "../../store/usePackagesStore";
 import PakcageImageShow from "../../components/packages/PackageImageShow";
+import DetailsPayment from "../../components/Payments/DetailsPayment";
+import PackageOverallView from "../../components/packages/PackageOverallView";
+import PackageReviews from "../../components/packages/PackageReviews";
+import PriceAndOffers from "../../components/packages/PriceAndOffers";
 
 const PackageDetails = () => {
   const { packageName } = useParams(); // Get package name from URL
@@ -18,36 +22,57 @@ const PackageDetails = () => {
   }
 
   return (
-    <div className="container mx-auto p-5">
-      <h1 className="text-2xl font-bold capitalize mb-4">{selectedPlace.location} Package</h1>
-      <div className="md:mb-6 md:p-4 rounded-lg ">
-        <h2 className="text-xl font-semibold">{selectedPlace.location}</h2>
-        <p className="text-gray-600">{selectedPlace.description}</p>
+    <div className="container mx-auto 2xl:px-40 xl:px-32 p-5">
+      <div className="flex flex-col gap-3">
+        <h2 className="text-xl font-semibold">{selectedPlace.detailsPageHeading}</h2>
 
-        {/* Image Display using ImageShow Component */}
-        <PakcageImageShow images={selectedPlace.images} />
+        {/* Grid Layout with Sticky Payment Section */}
+        <div className="grid md:grid-cols-12 gap-6">
+          {/* Left Content (Images and Details) */}
+          <div className="md:col-span-7 lg:col-span-8 flex flex-col gap-1">
+            <PakcageImageShow images={selectedPlace.images} />
+            
+            <div className="flex flex-col md:flex-row items-center px-5 py-3 border rounded-2xl justify-around border-[#ddddddd]">
 
-        {/* Package Details */}
-        <div className="w-full flex flex-col gap-3 pt-5">
-          <div className="grid grid-cols-3 gap-2">
-            <p className="text-slate-500/80 font-medium text-sm">SKU</p>
-            <p className="col-span-2 font-medium">BS0000087</p>
+              <div className="text-base font-semibold text-center">Guest
+                favourite</div>
+              <img src="/images/main/review.png" className="w-10" alt="" />
+              <div className="p-2 text-sm md:w-[60%] text-center font-medium">One of the most loved homes on Livetour, According to guests</div>
+
+              <div className="flex p-2 flex-col items-center">
+                <div className="text-base font-semibold">4.94</div>
+                <div className="flex">
+                  <img src="/images/svg/star.svg" className="object-contain w-3" alt="" />
+                  <img src="/images/svg/star.svg" className="object-contain w-3" alt="" />
+                  <img src="/images/svg/star.svg" className="object-contain w-3" alt="" />
+                  <img src="/images/svg/star.svg" className="object-contain w-3" alt="" />
+                  <img src="/images/svg/star.svg" className="object-contain w-3" alt="" />
+                </div>
+              </div>
+              <div className="h-10 border hidden md:block mx-2"></div>
+              <div className="flex p-2 flex-col items-center">
+                <div className="text-base font-semibold">4.94</div>
+                <div className="text-xs underline font-semibold">Reviews</div>
+              </div>
+            </div>
+
+            <PackageOverallView />
+            <iframe
+              src={`https://www.google.com/maps?q=${selectedPlace.location}&output=embed`}
+              className="w-full h-64 rounded-lg mt-2"
+              allowFullScreen
+            ></iframe>
           </div>
-          <div className="grid grid-cols-3 gap-2">
-            <p className="text-slate-500/80 font-medium text-sm">CATEGORY</p>
-            <p className="col-span-2 text-black text-sm font-semibold">
-              Fire Safes, Premium Safes, Safe
-            </p>
+          <div className="md:col-span-5 lg:col-span-4 " >
+            <div className="sticky  top-20">
+              <DetailsPayment />
+            </div>
           </div>
         </div>
-
-        <p className="mt-2 text-sm">
-          Price: <strong>{selectedPlace.price}</strong>
-        </p>
-        <p className="text-sm text-gray-500">
-          {selectedPlace.distance} | {selectedPlace.date}
-        </p>
       </div>
+      <PriceAndOffers/>
+
+      <PackageReviews />
     </div>
   );
 };

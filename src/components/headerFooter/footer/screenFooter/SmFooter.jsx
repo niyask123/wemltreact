@@ -27,7 +27,7 @@ const SmFooter = () => {
     return (
         <div className="md:hidden block">
             <div
-                className={`fixed bottom-0 rounded-t-2xl left-0 w-full bg-white shadow-md p-3 flex justify-around items-center border-t transition-transform duration-300 ${visible ? 'translate-y-0' : 'translate-y-full'}`}
+                className={`fixed bottom-0 rounded-t-2xl left-0 w-full bg-white shadow-md p-3 flex justify-around items-center border-t transition-transform duration-300 z-20 ${visible ? 'translate-y-0' : 'translate-y-full'}`}
             >
                 <button className="flex flex-col items-center" onClick={() => setActive('wishlist')}>
                     <Heart className={`w-6 h-6 ${active === 'wishlist' ? 'text-[#ef1b27]' : 'text-gray-500'}`} />

@@ -33,6 +33,8 @@ export const sectonTowPlaces = {
       date: "1-6 Mar",
       price: "₹21,979",
       guestFavorite: true,
+      checkinDate: "2025-03-01",  // Demo Check-in Date
+      checkoutDate: "2025-03-06", // Demo Check-out Date
       images: [
         "/images/packaging/6.jpg",
         "/images/packaging/7.jpg",
@@ -42,14 +44,24 @@ export const sectonTowPlaces = {
         "/images/packaging/11.jpg",
         "/images/packaging/13.jpg",
       ],
-      description: "Experience the beauty of nature with a peaceful stay in Chennai’s countryside. Perfect for relaxing getaways!",
+      description:
+        "Experience the beauty of nature with a peaceful stay in Chennai’s countryside. Perfect for relaxing getaways!",
       amenities: ["Free WiFi", "Breakfast Included", "Swimming Pool", "Parking"],
       reviews: [
         { user: "Rahul", comment: "Amazing experience! The view was breathtaking." },
-        { user: "Meera", comment: "Loved the hospitality and the food!" }
+        { user: "Meera", comment: "Loved the hospitality and the food!" },
       ],
-      highlights: ["Beautiful landscapes", "Local village tours", "Organic food options"]
+      highlights: [
+        "Beautiful landscapes",
+        "Local village tours",
+        "Organic food options",
+      ],
+      detailsPageHeading: ["The Hill Tranquil Pool Villa@Nandi Hills"],
+
+
     },
+
+
     {
       id: 2,
       location: "demo, India",
@@ -553,7 +565,7 @@ export const sectonTowPlaces = {
       ],
       highlights: ["Royal experience", "Cultural performances", "Camel safari"]
     },
-  ],omg: [
+  ], omg: [
     {
       id: 1,
       location: "Rajasthan, India",
@@ -575,7 +587,7 @@ export const sectonTowPlaces = {
       ],
       highlights: ["Royal experience", "Cultural performances", "Camel safari"]
     },
-  ],luxe: [
+  ], luxe: [
     {
       id: 1,
       location: "Rajasthan, India",
@@ -597,7 +609,7 @@ export const sectonTowPlaces = {
       ],
       highlights: ["Royal experience", "Cultural performances", "Camel safari"]
     },
-  ],treehouses: [
+  ], treehouses: [
     {
       id: 1,
       location: "Rajasthan, India",
@@ -619,7 +631,7 @@ export const sectonTowPlaces = {
       ],
       highlights: ["Royal experience", "Cultural performances", "Camel safari"]
     },
-  ],lakefront: [
+  ], lakefront: [
     {
       id: 1,
       location: "Rajasthan, India",
@@ -641,7 +653,7 @@ export const sectonTowPlaces = {
       ],
       highlights: ["Royal experience", "Cultural performances", "Camel safari"]
     },
-  ],lakefront: [
+  ], lakefront: [
     {
       id: 1,
       location: "Rajasthan, India",
@@ -667,3 +679,109 @@ export const sectonTowPlaces = {
 
 };
 
+
+
+
+
+export const reviewsData = [
+  {
+    id: 1,
+    name: "Niyas",
+    date: "May 2023",
+    img: "https://d1i3enf1i5tb1f.cloudfront.net/Review/26950/Laura%20R.jpg",
+    review:
+      "Bird Paradise in Singapore is so beautiful that it is a joy to all ages. The aviaries are well-designed and provide a close encounter with a wide array of colorful and charismatic birds.",
+    rating: 5,
+    reviewStatus: "Excellent",
+  },
+  {
+    id: 2,
+    name: "Roy",
+    date: "Jan 2024",
+    img: "https://randomuser.me/api/portraits/women/47.jpg",
+    review:
+      "Absolutely loved my trip to Bali! The beaches, the food, and the people were all amazing. I can’t wait to visit again!",
+    rating: 4,
+    reviewStatus: "Very Good",
+  },
+  {
+    id: 3,
+    name: "Rahul",
+    date: "Dec 2023",
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    review:
+      "Visiting the Swiss Alps was a dream come true! The snow-covered mountains and peaceful scenery were breathtaking.",
+    rating: 5,
+    reviewStatus: "Excellent",
+  },
+  {
+    id: 4,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/5.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+  {
+    id: 5,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/7.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+  {
+    id: 6,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/8.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+  {
+    id: 7,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/9.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+  {
+    id: 8,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/10.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+  {
+    id: 9,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/11.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+  {
+    id: 10,
+    name: "Samantha",
+    date: "Feb 2024",
+    img: "https://randomuser.me/api/portraits/women/12.jpg",
+    review:
+      "I had an amazing experience in Thailand! The street food, the beaches, and the people were all incredible. Highly recommend!",
+    rating: 3,
+    reviewStatus: "Good",
+  },
+];

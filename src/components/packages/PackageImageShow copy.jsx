@@ -59,9 +59,7 @@ const PakcageImageShow = ({ images }) => {
           <div className={`absolute bottom-0 flex flex-col gap-2 overflow-auto  rounded-3xl text-sm left-0 w-full bg-black bg-opacity-50 text-white  px-4 transition-all duration-300 ${showFullText ? "py-6 h-full  flex" : "py-2 h-20"}`}>
             <p className={`${showFullText ? "whitespace-normal" : "line-clamp-3 w-full"}`}>
             <div className="font-semibold md:text-sm 2xl:text-2xl">About this space</div>
-            <div className="font-semibold md:text-sm 2xl:text-2xl">About this space</div>
-            <div className="font-semibold md:text-sm 2xl:text-2xl">About this space</div>
-            <div className="font-semibold md:text-sm 2xl:text-2xl">About this space</div>
+
             </p>
             <button
               onClick={() => setShowFullText(!showFullText)}

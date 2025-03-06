@@ -16,6 +16,19 @@
   0% { transform: scale(0.8); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
+
+.zoom-out {
+  animation: zoomOut 0.3s ease-out forwards;
+}
+
+@keyframes zoomOut {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+
+
 .box-shadow-g {
   box-shadow: 4px 12px 47px 0 rgba(0, 0, 0, 0.1);
 }
@@ -33,3 +46,6 @@
   box-shadow: 0 0 0 1px rgb(0 0 0/4%),0 6px 20px rgb(0 0 0/20%);
 }
 
+.custom-list li::marker {
+  color: #ef1b27; /* This is orange-300 */
+}

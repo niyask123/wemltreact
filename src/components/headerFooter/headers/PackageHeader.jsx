@@ -30,7 +30,7 @@ const PackageHeader = () => {
     };
 
     return (
-        <div className="hidden md:flex flex-col gap-3 p-4 pt-6 pb-2 px-3 container mx-auto">
+        <div className="hidden md:flex flex-col gap-3 p-4 pt-6 pb-2 px-3 container mx-auto 2xl:px-40 xl:px-32">
             <div className="flex flex-row justify-between items-center">
                 <img
                     src="/images/logo/logo.png"
