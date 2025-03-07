@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import usePackageStore from "../../store/usePackagesStore";
 import PakcageImageShow from "../../components/packages/PackageImageShow";
@@ -11,19 +11,10 @@ import PackagesSpecialPromos from "../../components/packages/PackagesSpecialProm
 const PackageDetails = () => {
   const { packageName } = useParams(); // Get package name from URL
   const { places } = usePackageStore(); // Get all package places
-  const priceAndOffersRef = useRef(null); // Ref for scrolling
-
-  const scrollToPriceAndOffers = () => {
-    if (priceAndOffersRef.current) {
-      priceAndOffersRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   // Find the correct package details by matching the URL-friendly name
   const selectedPlace = places.find(
-    (place) =>
-      place.location.toLowerCase().replace(/\s+/g, "-") ===
-      packageName.toLowerCase()
+    (place) => place.location.toLowerCase().replace(/\s+/g, "-") === packageName
   );
 
   // If no matching package is found, show a message
@@ -32,7 +23,7 @@ const PackageDetails = () => {
   }
 
   return (
-    <div className="container mx-auto 2xl:px-40 xl:px-32 p-5">
+    <div className="container mx-auto  p-5">
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-semibold">{selectedPlace.detailsPageHeading}</h2>
 
@@ -42,12 +33,12 @@ const PackageDetails = () => {
           <div className="md:col-span-7 lg:col-span-8 flex flex-col gap-1">
             <PakcageImageShow images={selectedPlace.images} />
 
-            <div className="flex flex-col md:flex-row items-center px-5 py-3 border rounded-2xl justify-around border-[#ddddddd]">
-              <div className="text-base font-semibold text-center">Guest favourite</div>
+            <div className="flex box-shadow-a flex-col md:flex-row items-center px-5 py-3 border rounded-2xl justify-around border-[#ddddddd]">
+
+              <div className="text-base font-semibold text-center">Guest
+                favourite</div>
               <img src="/images/main/review.png" className="w-10" alt="" />
-              <div className="p-2 text-sm md:w-[60%] text-center font-medium">
-                One of the most loved homes on Livetour, According to guests
-              </div>
+              <div className="p-2 text-sm md:w-[60%] text-center font-medium">One of the most loved homes on Livetour, According to guests</div>
 
               <div className="flex p-2 flex-col items-center">
                 <div className="text-base font-semibold">4.94</div>
@@ -73,19 +64,14 @@ const PackageDetails = () => {
               allowFullScreen
             ></iframe>
           </div>
-
-          {/* Sticky Payment Section */}
-          <div className="md:col-span-5 lg:col-span-4">
-            <div className="sticky top-20">
-              <DetailsPayment onReserveClick={scrollToPriceAndOffers} />
+          <div className="md:col-span-5 lg:col-span-4 " >
+            <div className="sticky  top-20">
+              <DetailsPayment />
             </div>
           </div>
         </div>
       </div>
-
-      <div ref={priceAndOffersRef}>
-        <PriceAndOffers />
-      </div>
+      <PriceAndOffers />
 
       <PackageReviews />
     </div>

@@ -130,7 +130,7 @@ const PackagesMenu = () => {
                     {/* Toggle Option */}
                     <div className="p-3 h-full hidden lg:flex flex-row border border-[#dddddd] rounded-2xl gap-3">
                         <div className="flex justify-between flex-row gap-3 items-center">
-                            <div className="text-xs font-medium text-nowrap">
+                            <div className="text-xs w-fit font-medium text-nowrap">
                                 Display total before taxes
                             </div>
                             <input type="checkbox" className="toggle" />

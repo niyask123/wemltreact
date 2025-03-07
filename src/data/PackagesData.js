@@ -679,10 +679,6 @@ export const sectonTowPlaces = {
 
 };
 
-
-
-
-
 export const reviewsData = [
   {
     id: 1,
@@ -784,4 +780,44 @@ export const reviewsData = [
     rating: 3,
     reviewStatus: "Good",
   },
+];
+
+export const priceAndOffersTableData = [
+  {
+      id: 1,
+      tourName: 'Mountain Adventure',
+      transfer: 'Without Transfer',
+      adult: '0',
+      child: '0',
+      infant: '0',
+      date: '2025-10-10',
+      totalAmount: 300,
+      selected: false,
+      timeSlot: "Select Time Slot",
+      fundStatus: "Non Refundable"
+  },
+  {
+      id: 2,
+      tourName: 'Dolphinarium  Majestic Swim - Private Session (1 to 3 People)',
+      transfer: 'Without Transfer',
+      adult: '0',
+      child: '0',
+      infant: '0',
+      date: '2025-10-10',
+      totalAmount: 300,
+      selected: false,
+      timeSlot: "Select Time Slot",
+      fundStatus: "Refundable"
+  }
+];
+export const transferTimings = [
+  { type: 'Sharing Transfers', timing: 'Pick up at 10:00 AM Drop off at 12:30 PM', duration: '02:00 hours' },
+  { type: 'Private Transfers', timing: 'Pick up at 10:00 AM Drop off at 12:30 PM', duration: '2:00 hours' },
+  { type: 'Without Transfers', timing: 'Dolphin and Seal show -11am, 02pm and 05pm', duration: '00:45 hours' }
+];
+export const bookingDetails = [
+  { title: 'Voucher Confirmation', subtitle: 'Mobile Voucher', description: 'Use your phone or Print your Voucher' },
+  { title: 'Booking Confirmation', subtitle: 'Instant Confirmation', description: 'Instant Tour Confirmation will be Provided' },
+  { title: 'Booking Confirmation', subtitle: 'Instant Confirmation', description: 'Instant Tour Confirmation will be Provided' },
+  { title: 'Booking Confirmation', subtitle: 'Instant Confirmation', description: 'Instant Tour Confirmation will be Provided' }
 ];

@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import usePackageStore from '../../store/usePackagesStore';
 import { useParams } from 'react-router-dom';
 
-const DetailsPayment = ({ onReserveClick }) => {
+const DetailsPayment = ({setShowPriceAndOffers}) => {
+    
     const { packageName } = useParams(); // Get package name from URL
     const { places } = usePackageStore(); // Get all package places
     const dropdownRef = useRef(null);
@@ -125,13 +126,12 @@ const DetailsPayment = ({ onReserveClick }) => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <button
-                        className="btn rounded-full bg-blue-700 h-12 hover:bg-blue-600 text-white py-2.5 btn-sm w-full text-sm flex justify-center items-center leading-normal"
-                        onClick={onReserveClick}
-                    >
-                        Reserve info
-                    </button>
-
+                <button
+          onClick={() => setShowPriceAndOffers(prev => !prev)}
+          className="btn rounded-full bg-blue-700 h-12 hover:bg-blue-600 text-white py-2.5 btn-sm w-full text-sm flex justify-center items-center leading-normal"
+        >
+          Reserve / Check availability
+        </button>
                     <div className="text-xs text-center">
                         You won't be charged yet
                     </div>
