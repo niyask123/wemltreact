@@ -2,7 +2,7 @@ import React from 'react'
 
 const PackagesSpecialPromos = () => {
     return (
-        <div className='py-3'>
+        <div className='py-3 hidden md:block'>
             <div className="stats box-shadow-g rounded-2xl w-full">
                 <div className="stat">
                     <div className="stat-figure text-primary">
