@@ -103,8 +103,8 @@ const PackagesMenu = () => {
                                 />
                                 <div
                                     className={`text-xs font-medium text-nowrap relative ${activePackage === pkg.nameId
-                                            ? "text-black"
-                                            : "text-gray-500"
+                                        ? "text-black"
+                                        : "text-gray-500"
                                         }`}
                                 >
                                     {pkg.name}

@@ -166,7 +166,7 @@ const MainHeader = () => {
                 loading ? (
                     <div className="skeleton w-full h-12 rounded-full"></div>
                 ) : (
-                    <div className={`zoom-in z-[1]  text-xs font-medium max-w-[850px] lg:max-w-[650px]  rounded-full box-shadow border-[1px] border-[#DDDDDD] flex flex-row gap-3 w-full justify-between items-center fade-in show container mx-auto ${showOptions ? "block" : "hidden"}`}>
+                    <div className={`zoom-in  text-xs font-medium max-w-[850px] lg:max-w-[650px]  rounded-full box-shadow border-[1px] border-[#DDDDDD] flex flex-row gap-3 w-full justify-between items-center fade-in show container mx-auto ${showOptions ? "block" : "hidden"}`}>
                         {activeTab === "tab1" && (
                             <div className="text-xs font-medium  flex flex-row w-full justify-between items-center container mx-auto">
                                 <div className=" flex-1 rounded-full  hover:bg-gray-200 transition-all duration-200">
@@ -223,7 +223,7 @@ const MainHeader = () => {
                                 </div>
 
                                 {showPicker && (
-        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white p-2 shadow-lg rounded-lg z-10 mt-3 box-shadow-g">
+        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white p-2 shadow-lg rounded-lg z-10">
           <DatePicker
             selectsRange
             startDate={startDate}

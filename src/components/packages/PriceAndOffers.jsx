@@ -4,8 +4,19 @@ import { priceAndOffersTableData } from '../../data/PackagesData';
 import PackageMoreInforModal from '../modal/package/PackageMoreInforModal';
 import PackageSelectTimeSlot from '../modal/package/PackageSelectTimeSlot';
 import { BaggageClaim } from 'lucide-react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const PriceAndOffers = () => {
+
+    const navigate = useNavigate();
+    const { packageName } = useParams();
+  
+    const handleAddToCart = () => {
+      navigate("/cart", { state: { packageName } });
+    };
+
+
+
     const [options, setOptions] = useState(priceAndOffersTableData);
 
     // Handle selection change for dropdowns and input fields
@@ -31,7 +42,7 @@ const PriceAndOffers = () => {
             accessorKey: 'tourName',
             cell: ({ row }) => (
                 <div className="flex items-center gap-3 justify-between pl-4 w-fit">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 md:gap-3">
                         <input
                             type="checkbox"
                             checked={row.original.selected}
@@ -138,35 +149,42 @@ const PriceAndOffers = () => {
     });
 
     return (
-        <div className="overflow-x-auto box-shadow-g mt-6 rounded-2xl">
-            <table className="table table-xs w-full">
-                <thead>
-                    {table.getHeaderGroups().map(headerGroup => (
-                        <tr key={headerGroup.id}>
-                            {headerGroup.headers.map(column => (
-                                <th key={column.id} className="text-center text-xs font-semibold !pr-3">
-                                    {flexRender(column.column.columnDef.header, column.getContext())}
-                                </th>
+        <>
+            <div className="box-shadow-g pb-3 rounded-2xl">
+                <div className="overflow-x-auto  mt-6 ">
+                    <table className="table table-xs w-full">
+                        <thead>
+                            {table.getHeaderGroups().map(headerGroup => (
+                                <tr key={headerGroup.id}>
+                                    {headerGroup.headers.map(column => (
+                                        <th key={column.id} className="text-center text-xs font-semibold !pr-3">
+                                            {flexRender(column.column.columnDef.header, column.getContext())}
+                                        </th>
+                                    ))}
+                                </tr>
                             ))}
-                        </tr>
-                    ))}
-                </thead>
-                <tbody>
-                    {table.getRowModel().rows.map(row => (
-                        <tr key={row.id} className={row.original.selected ? "bg-gray-100/50" : ""}>
-                            {row.getVisibleCells().map(cell => (
-                                <td key={cell.id} className="text-center text-xs !w-fit">
-                                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                                </td>
+                        </thead>
+                        <tbody>
+                            {table.getRowModel().rows.map(row => (
+                                <tr key={row.id} className={row.original.selected ? "bg-gray-100/50" : ""}>
+                                    {row.getVisibleCells().map(cell => (
+                                        <td key={cell.id} className="text-center text-xs !w-fit">
+                                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                        </td>
+                                    ))}
+                                </tr>
                             ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <div className="flex flex-row justify-end my-3 px-6 items-center w-full">
-                <button className="btn rounded-full w-60  bg-blue-700 h-12 hover:bg-blue-600 text-white py-2.5 btn-sm  text-sm flex justify-center items-center leading-normal gap-3"><BaggageClaim className='size-5' /> Add to cart</button>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div className="flex flex-row justify-end my-3 px-6 items-center w-full">
+                    <button
+                     onClick={handleAddToCart}
+                    className="btn rounded-full w-60  bg-blue-700 h-12 hover:bg-blue-600 text-white py-2.5 btn-sm  text-sm flex justify-center items-center leading-normal gap-3"><BaggageClaim className='size-5' /> Add to cart</button>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

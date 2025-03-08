@@ -37,4 +37,20 @@
     }
   }
 
-  
+  /* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Adjust as needed */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3748; /* Darker shade on hover */
+}

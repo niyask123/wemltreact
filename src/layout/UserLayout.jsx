@@ -4,19 +4,22 @@ import Header from "../components/headerFooter/headers/Header";
 import Footer from "../components/headerFooter/footer/Footer";
 import PackageHeader from "../components/headerFooter/headers/PackageHeader";
 import SmFooterPayment from "../components/Payments/SmFooterPayment";
+import ScrollBack from "../components/ScrollBack";
 
 export default function UserLayout() {
   const location = useLocation(); // Get current route
 
-  const isPackageDetailsPage = location.pathname.startsWith("/package/"); // Check if it's PackageDetails
+  // Check if it's PackageDetails page or Cart page
+  const isPackageOrCartPage = location.pathname.startsWith("/package/") || location.pathname === "/cart";
 
   return (
     <>
-      {isPackageDetailsPage ? <PackageHeader /> : <Header />}
+      <ScrollBack />
+      {isPackageOrCartPage ? <PackageHeader /> : <Header />}
       <div className="">
         <Outlet />
       </div>
-      {isPackageDetailsPage ? <SmFooterPayment /> : <Footer />}
+      {isPackageOrCartPage ? "" : <Footer />}
     </>
   );
 }
