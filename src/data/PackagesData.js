@@ -821,3 +821,97 @@ export const bookingDetails = [
   { title: 'Booking Confirmation', subtitle: 'Instant Confirmation', description: 'Instant Tour Confirmation will be Provided' },
   { title: 'Booking Confirmation', subtitle: 'Instant Confirmation', description: 'Instant Tour Confirmation will be Provided' }
 ];
+
+
+// export const tourPackages = [
+//   {
+//     id: 1,
+//     title: "Dubai Dolphinarium",
+//     pricePerNight: 2500,
+//     tourOption: "IMG Entry tickets",
+//     date: "8/3/2025",
+//     serviceFee: "₹8,894",
+//     transferType: "Without Transfers",
+//     transferTimings: "Park Timings: Sunday to Friday - 12:00 PM To 10:00 PM Saturday - 12:00 PM To 11:00 PM",
+//     lastCancellationDate: "Non Refundable",
+//     availability: "Available",
+//     amountInclVAT: "AED 225.00",
+//     total: "₹71,890",
+//   },
+//   {
+//     id: 2,
+//     title: "Empire State Building: General Admission Tickets",
+//     pricePerNight: 2500,
+//     tourOption: "IMG Entry tickets",
+//     date: "8/3/2025",
+//     serviceFee: "₹8,894",
+//     transferType: "Without Transfers",
+//     transferTimings: "Park Timings: Sunday to Friday - 12:00 PM To 10:00 PM Saturday - 12:00 PM To 11:00 PM",
+//     lastCancellationDate: "Non Refundable",
+//     availability: "Available",
+//     amountInclVAT: "AED 225.00",
+//     total: "₹71,890",
+//   },
+//   {
+//     id: 3,
+//     title: "Statue of Liberty",
+//     pricePerNight: 2500,
+//     tourOption: "IMG Entry tickets",
+//     date: "8/3/2025",
+//     serviceFee: "₹8,894",
+//     transferType: "Without Transfers",
+//     transferTimings: "Park Timings: Sunday to Friday - 12:00 PM To 10:00 PM Saturday - 12:00 PM To 11:00 PM",
+//     lastCancellationDate: "Non Refundable",
+//     availability: "Available",
+//     amountInclVAT: "AED 225.00",
+//     total: "₹71,890",
+//   },
+// ];
+
+export const travelPackages = [
+  {
+    title: "Dubai Dolphinarium",
+    price: "2500",
+    details: [
+      { label: "Tour Option", value: "IMG Entry tickets" },
+      { label: "Date", value: "8/3/2025" },
+      { label: "Live-Tour service fee", value: "₹8,894" },
+      { label: "Transfer Type", value: "Without Transfers" },
+      { label: "Availability", value: "Available" },
+      { label: "Amount Incl. VAT", value: "AED 225.00" },
+      { label: "Total", value: "₹71,890" },
+    ],
+    cancelPolicy: "Non Refundable",
+  },
+  {
+    title: "Empire State Building: General Admission Tickets",
+    price: "2500",
+    details: [
+      { label: "Tour Option", value: "General Admission" },
+      { label: "Date", value: "8/3/2025" },
+      { label: "Live-Tour service fee", value: "₹8,894" },
+      { label: "Transfer Type", value: "Without Transfers" },
+      { label: "Availability", value: "Available" },
+      { label: "Amount Incl. VAT", value: "AED 225.00" },
+      { label: "Total", value: "₹71,890" },
+    ],
+    cancelPolicy: "Non Refundable",
+  },
+  {
+    title: "Statue of Liberty",
+    price: "2500",
+    details: [
+      { label: "Tour Option", value: "Liberty Access Ticket" },
+      { label: "Date", value: "8/3/2025" },
+      { label: "Live-Tour service fee", value: "₹8,894" },
+      { label: "Transfer Type", value: "Without Transfers" },
+      { label: "Availability", value: "Available" },
+      { label: "Amount Incl. VAT", value: "AED 225.00" },
+      { label: "Total", value: "₹71,890" },
+    ],
+    cancelPolicy: "Non Refundable",
+  },
+];
+
+
+export const finalAmount = "₹8,894";

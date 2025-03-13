@@ -5,8 +5,9 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   
-  plugins: [require("daisyui")], // Ensure DaisyUI is included
+  plugins: [require("daisyui")], 
   daisyui: {
-    themes: ["light"], // Force light mode only
+    themes: ["light"],  // Only light theme
+    darkTheme: false,   // Disable dark mode
   },
 };

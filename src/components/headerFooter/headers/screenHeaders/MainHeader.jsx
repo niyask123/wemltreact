@@ -7,13 +7,29 @@ import CustomNav from "../../../modal/customNav/CustomNav";
 import { stayList } from "../../../../data/dats";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "../../../../style/datePicker.css";
+
 
 const MainHeader = () => {
 
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
     const [dateRange, setDateRange] = useState([null, null]);
-  const [startDate, endDate] = dateRange;
-  const [showPicker, setShowPicker] = useState(false);
+    const [startDate, endDate] = dateRange;
+    const [showPicker, setShowPicker] = useState(false);
 
 
 
@@ -169,46 +185,47 @@ const MainHeader = () => {
                     <div className={`zoom-in z-[1]  text-xs font-medium max-w-[850px] lg:max-w-[650px]  rounded-full box-shadow border-[1px] border-[#DDDDDD] flex flex-row gap-3 w-full justify-between items-center fade-in show container mx-auto ${showOptions ? "block" : "hidden"}`}>
                         {activeTab === "tab1" && (
                             <div className="text-xs font-medium  flex flex-row w-full justify-between items-center container mx-auto">
-                                <div className=" flex-1 rounded-full  hover:bg-gray-200 transition-all duration-200">
-                                    <button popoverTarget="popover-1" style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */} className="dropdown-btn text-nowrap px-3 pl-6 py-2 flex flex-col ">
-                                        Where
-                                        <span
-                                            className="text-[11px] text-gray-500 truncate max-w-32 block"
-                                            title="Search Destinations"
-                                        >
+                                <div ref={dropdownRef} className="relative flex-1 rounded-full hover:bg-gray-200 transition-all duration-200">
+                                    <button
+                                        onClick={() => setIsOpen(!isOpen)}
+                                        className="dropdown-btn text-nowrap px-3 pl-6 py-2 flex flex-col"
+                                    >
+                                        Where 
+                                        <span className="text-[11px] text-gray-500 truncate max-w-32 block" title="Search Destinations">
                                             Search Destinations
                                         </span>
                                     </button>
-                                    <ul className="dropdown h-auto mt-3 rounded-3xl box-shadow-g menu w-96  bg-base-100 shadow-sm"
-                                        popover="auto" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */}>
-                                        <div className="p-3 flex flex-col gap-2 overflow-y-auto max-h-96 h-96">
-                                            {stayList.map((location, index) => (
-                                                <div
-                                                    key={`${location.id}-${index}`} // Ensuring unique keys
-                                                    className="flex px-3 py-2 rounded-lg items-center flex-row justify-start gap-3 cursor-pointer hover:bg-gray-100"
-                                                >
-                                                    <img
-                                                        src={location.image}
-                                                        className="object-contain bg-[#f4f4f4] rounded-lg w-14 h-14"
-                                                        alt={location.name}
-                                                    />
-                                                    <div className="flex flex-col">
-                                                        <div className="text-sm font-semibold text-black/80">
-                                                            {location.name}
+
+                                    {isOpen && (
+                                        <ul className="absolute left-0 mt-3 rounded-3xl shadow-lg w-96 bg-white max-h-96 overflow-y-auto z-50">
+                                            <div className="p-3 flex flex-col gap-2">
+                                                {stayList.map((location, index) => (
+                                                    <div
+                                                        key={`${location.id}-${index}`}
+                                                        className="flex px-3 py-2 rounded-lg items-center flex-row justify-start gap-3 cursor-pointer hover:bg-gray-100"
+                                                        onClick={() => setIsOpen(false)} // Close dropdown on select
+                                                    >
+                                                        <img
+                                                            src={location.image}
+                                                            className="object-contain bg-[#f4f4f4] rounded-lg w-14 h-14"
+                                                            alt={location.name}
+                                                        />
+                                                        <div className="flex flex-col">
+                                                            <div className="text-sm font-semibold text-black/80">{location.name}</div>
+                                                            <div className="text-xs text-gray-500">{location.description}</div>
                                                         </div>
-                                                        <div className="text-xs text-gray-500">{location.description}</div>
                                                     </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </ul>
+                                                ))}
+                                            </div>
+                                        </ul>
+                                    )}
                                 </div>
                                 <div className="h-6 border"></div>
                                 <div className="hidden sm:flex justify-center flex-1 rounded-full hover:bg-gray-200 transition-all duration-200">
                                     <button onClick={() => setShowPicker(!showPicker)} className="dropdown-btn text-nowrap px-3 py-2 flex flex-col rounded-full  hover:bg-gray-200 transition-all duration-200">
                                         Check In
                                         <span className="text-[11px] text-gray-500 truncate max-w-28 block">
-                                        {startDate ? startDate.toLocaleDateString() : "Add Date"}
+                                            {startDate ? startDate.toLocaleDateString() : "Add Date"}
                                         </span>
                                     </button>
                                 </div>
@@ -217,29 +234,29 @@ const MainHeader = () => {
                                     <button onClick={() => setShowPicker(!showPicker)} className="dropdown-btn text-nowrap px-3 py-2 flex flex-col ">
                                         Check Out
                                         <span className="text-[11px] text-gray-500 truncate max-w-28 block">
-                                        {endDate ? endDate.toLocaleDateString() : "Add Date"}
+                                            {endDate ? endDate.toLocaleDateString() : "Add Date"}
                                         </span>
                                     </button>
                                 </div>
 
                                 {showPicker && (
-        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white p-2 shadow-lg rounded-lg z-10 mt-3 box-shadow-g">
-          <DatePicker
-            selectsRange
-            startDate={startDate}
-            endDate={endDate}
-            onChange={(update) => {
-              setDateRange(update);
-              if (update[0] && update[1]) {
-                setShowPicker(false);
-              }
-            }}
-            dateFormat="yyyy/MM/dd"
-            monthsShown={2} // Show two months in one view
-            inline
-          />
-        </div>
-      )}
+                                    <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white p-2 shadow-lg  rounded-lg z-10 mt-3 box-shadow-g">
+                                        <DatePicker
+                                            selectsRange
+                                            startDate={startDate}
+                                            endDate={endDate}
+                                            onChange={(update) => {
+                                                setDateRange(update);
+                                                if (update[0] && update[1]) {
+                                                    setShowPicker(false);
+                                                }
+                                            }}
+                                            dateFormat="yyyy/MM/dd"
+                                            monthsShown={2} // Show two months in one view
+                                            inline
+                                        />
+                                    </div>
+                                )}
                                 <div className="h-6 border"></div>
                                 <div className="flex items-center space-x-2 group hover:bg-gray-200 rounded-full transition-all duration-200">
                                     <div className="flex-1 lg:w-32 w-32  lg:pl-3">

@@ -23,7 +23,7 @@ const LoginSignupModal = ({ modalRef }) => {
           <form>
             <div className="flex sm:flex-row items-center gap-2 flex-col">
               <select className="select input input-bordered focus:ring-0 focus:outline-none hover:ring-0 w-full md:w-1/3 text-xs">
-                <option value="+1">US (+1)</option>
+                <option disabled selected value="" className="text-green-500">Choose:</option>
                 <option value="+44">UK (+44)</option>
               </select>
               <input
@@ -31,8 +31,8 @@ const LoginSignupModal = ({ modalRef }) => {
                 placeholder="Enter text"
                 className="input input-bordered w-full focus:ring-0 focus:outline-none hover:ring-0"
               />
-
             </div>
+
             <p className="md:text-xs text-gray-600 mt-2 text-[11px]">
               We’ll call or text you to confirm your number. Standard message and data rates apply.
               <span className="font-semibold underline"> Privacy Policy</span>
