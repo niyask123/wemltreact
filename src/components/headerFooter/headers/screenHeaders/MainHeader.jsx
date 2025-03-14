@@ -2,18 +2,23 @@ import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineMenu, AiOutlineUserAdd } from "react-icons/ai";
 import LoginSignupModal from "../../../modal/logins/LoginSignupModal";
 import PackagesMenu from "../../../../pages/home/elements/PackagesMenu";
-import { div } from "framer-motion/client";
 import CustomNav from "../../../modal/customNav/CustomNav";
 import { stayList } from "../../../../data/dats";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../../../style/datePicker.css";
-
-
 const MainHeader = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const handleAutoSelect = (months) => {
+        const today = new Date();
+        const endDate = new Date(today);
+        endDate.setMonth(endDate.getMonth() + months);
+
+        setDateRange([today, endDate]);
+        setShowPicker(false); // Close picker after auto-selection
+    };
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -190,7 +195,7 @@ const MainHeader = () => {
                                         onClick={() => setIsOpen(!isOpen)}
                                         className="dropdown-btn text-nowrap px-3 pl-6 py-2 flex flex-col"
                                     >
-                                        Where 
+                                        Where
                                         <span className="text-[11px] text-gray-500 truncate max-w-32 block" title="Search Destinations">
                                             Search Destinations
                                         </span>
@@ -240,7 +245,7 @@ const MainHeader = () => {
                                 </div>
 
                                 {showPicker && (
-                                    <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white p-2 shadow-lg  rounded-lg z-10 mt-3 box-shadow-g">
+                                    <div className="absolute top-12 left-1/2 transform rounded-3xl -translate-x-1/2 bg-white p-2 shadow-lg z-10 mt-3 box-shadow-g">
                                         <DatePicker
                                             selectsRange
                                             startDate={startDate}
@@ -255,8 +260,33 @@ const MainHeader = () => {
                                             monthsShown={2} // Show two months in one view
                                             inline
                                         />
+
+                                        {/* Auto-Select Buttons */}
+                                        <div className="flex justify-around my-4 space-x-2">
+                                            <button
+                                                className="btn"
+                                                onClick={() => handleAutoSelect(1)}
+                                            >
+                                                1 Month
+                                            </button>
+
+                                            <button
+                                                className="btn"
+                                                onClick={() => handleAutoSelect(2)}
+                                            >
+                                                2 Months
+                                            </button>
+
+                                            <button
+                                                className="btn"
+                                                onClick={() => handleAutoSelect(3)}
+                                            >
+                                                3 Months
+                                            </button>
+                                        </div>
                                     </div>
                                 )}
+
                                 <div className="h-6 border"></div>
                                 <div className="flex items-center space-x-2 group hover:bg-gray-200 rounded-full transition-all duration-200">
                                     <div className="flex-1 lg:w-32 w-32  lg:pl-3">
