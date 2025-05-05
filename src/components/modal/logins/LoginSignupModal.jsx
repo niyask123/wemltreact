@@ -21,7 +21,7 @@ const LoginSignupModal = ({ modalRef }) => {
         {/* Modal Content */}
         <div className="py-6 space-y-4">
           <form>
-            <div className="flex sm:flex-row items-center gap-2 flex-col">
+            {/* <div className="flex sm:flex-row items-center gap-2 flex-col">
               <select className="select input input-bordered focus:ring-0 focus:outline-none hover:ring-0 w-full md:w-1/3 text-xs">
                 <option disabled selected value="" className="text-green-500">Choose:</option>
                 <option value="+44">UK (+44)</option>
@@ -31,7 +31,7 @@ const LoginSignupModal = ({ modalRef }) => {
                 placeholder="Enter text"
                 className="input input-bordered w-full focus:ring-0 focus:outline-none hover:ring-0"
               />
-            </div>
+            </div> */}
 
             <p className="md:text-xs text-gray-600 mt-2 text-[11px]">
               We’ll call or text you to confirm your number. Standard message and data rates apply.
